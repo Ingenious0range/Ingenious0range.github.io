@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-    --cherry-blossom-pink: #f5a9b8ff;
-    --fairy-tale: #faccd7ff;
-    --lavender-blush: #ffeff6ff;
-    --snow: #fff7fbff;
-    --white: #ffffffff;
-    --alice-blue: #f4fcffff;
-    --alice-blue-2: #C0EAFE;
-    --uranian-blue: #a3e0fdff;
-    --vivid-sky-blue: #5bcefaff;
-    --darker-uranian-blue: rgb(23, 33, 37);
+  --cherry-blossom-pink: #f5a9b8ff;
+  --fairy-tale: #faccd7ff;
+  --lavender-blush: #ffeff6ff;
+  --snow: #fff7fbff;
+  --white: #ffffffff;
+  --alice-blue: #f4fcffff;
+  --alice-blue-2: #c0eafe;
+  --uranian-blue: #a3e0fdff;
+  --vivid-sky-blue: #5bcefaff;
+  --darker-uranian-blue: rgb(23, 33, 37);
 }
 
 /*
@@ -18,235 +18,241 @@ https://coolors.co/f5a9b8-faccd7-ffeff6-fff7fb-ffffff-f4fcff-ddf4ff-c0eafe-a3e0f
 */
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-body{
-    background-color: var(--white);
-    font-family: 'Lato', sans-serif;
-    height: 200vh;
+body {
+  background-color: var(--white);
+  font-family: "Lato", sans-serif;
+  height: 200vh;
 }
 
 .landingHeader {
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-    background-color: var(--lavender-blush);
-    padding: 3vw;
-    background-image: url("/SVG/landing.svg");
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-color: var(--lavender-blush);
+  padding: 3vw;
+  background-image: url("/SVG/landing.svg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 .landingHeader p:first-child {
-    font-size: 10vh;
-    font-weight: 900;
-    color: var(--vivid-sky-blue);
+  font-size: 10vh;
+  font-weight: 900;
+  color: var(--vivid-sky-blue);
 }
 
 .landingHeader p {
-    font-size: 5vh;
-    font-weight: 700;
-    color: var(--uranian-blue);
-    margin: 0;
-    padding: 0;
+  font-size: 5vh;
+  font-weight: 700;
+  color: var(--uranian-blue);
+  margin: 0;
+  padding: 0;
 }
 
 .landingHeader a {
-    font-size: 3vh;
-    background-color: transparent;
-    color: var(--vivid-sky-blue);
-    width: 3vw;
-    height: 3vw;
-    box-sizing: border-box;
-    bottom: 3vw;
-    padding: .5vw;
-    position: absolute;
-    border-radius: 100%;
-    text-align: center;
-    left: 48.5vw;
-    transition: .3s;
+  font-size: 3vh;
+  background-color: transparent;
+  color: var(--vivid-sky-blue);
+  width: 3vh;
+  height: 3vh;
+  bottom: 3vw;
+  padding: 0.5vw;
+  position: absolute;
+  border-radius: 100%;
+  text-align: center;
+  left: calc(50vw - 2.5vh);
+  transition: 0.3s;
+  vertical-align: center;
+  box-sizing: content-box;
 }
 
 .landingHeader a:hover {
-    background-color: var(--lavender-blush);
+  background-color: var(--lavender-blush);
 }
 
 /*yes i know i'm not starting from 0 with the counting. and no, i don't care*/
 
 .block2 {
-    background-color: var(--alice-blue);
-    background-image: url('/SVG/block2.svg');
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 3vw;
-    left: 0;
-    top: 100%;
-    position: absolute;
-    display: grid;
-    grid-template-columns: 50% auto;
-    text-align: right;
+  background-color: var(--alice-blue);
+  background-image: url("/SVG/block2.svg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3vw;
+  left: 0;
+  top: 100%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 50% auto;
+  text-align: right;
 }
 
 .block2 p {
-    font-size: 10vh;
-    font-weight: 900;
-    color: var(--vivid-sky-blue);
-    text-align: inherit;
-    max-width: 100%;
-    right: 3vw;
-    position: relative;
-    line-height: 60%;
+  font-size: 10vh;
+  font-weight: 900;
+  color: var(--vivid-sky-blue);
+  text-align: inherit;
+  max-width: 100%;
+  right: 3vw;
+  position: relative;
+  line-height: 60%;
 }
 
 .block2 p span {
-    font-size: 5vh;
-    color: var(--uranian-blue);
-    line-height: 8%;
+  font-size: 5vh;
+  color: var(--uranian-blue);
+  line-height: 8%;
 }
 
 .block2 img {
-    width: 20vw;
-    height: 20vw;
+  width: 20vw;
+  height: 20vw;
+  top: calc(50% - 10vw);
+  position: relative;
+  left: calc(50% - 10vw);
 }
 
 .block3 {
-    background-color: var(--alice-blue);
-    background-image: url('/SVG/block3.svg');
-    background-position: top;
-    background-size: contain;
-    background-repeat: repeat-y;
-    height: max-content;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 3vw;
-    left: 0;
-    top: 200%;
-    position: absolute;
+  background-color: var(--alice-blue);
+  background-image: url("/SVG/block3.svg");
+  background-position: top;
+  background-size: contain;
+  background-repeat: repeat-y;
+  height: max-content;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3vw;
+  left: 0;
+  top: 200%;
+  position: absolute;
 }
 
 .block3 p {
-    font-size: 10vh;
-    font-weight: 900;
-    color: var(--cherry-blossom-pink);
-    text-align: right;
-    width: 100%;
-    right: 3vw;
-    position: relative;
-
+  font-size: 10vh;
+  font-weight: 900;
+  color: var(--cherry-blossom-pink);
+  text-align: right;
+  width: 100%;
+  right: 3vw;
+  position: relative;
 }
 
 .block3 p span {
-    font-size: 5vh;
-    color: var(--fairy-tale);
+  font-size: 5vh;
+  color: var(--fairy-tale);
 }
 
 .project-grid {
-    width: 90%;
-    padding: 1vw;
-    left: 5%;
-    position: relative;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: calc(50% - 1vw) calc(50% - 1vw);
-    grid-gap: 2vw;
-    padding: 0;
+  width: 90%;
+  padding: 1vw;
+  left: 5%;
+  position: relative;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: calc(50% - 1vw) calc(50% - 1vw);
+  grid-gap: 2vw;
+  padding: 0;
 }
 
 .project-grid div {
-    width: auto;
-    background-color: var(--fairy-tale);
-    border-radius: 2vw;
-    padding: 1vw;
-    display: grid;
-    grid-template-columns: 50% 50%;
+  width: auto;
+  background-color: var(--fairy-tale);
+  border-radius: 2vw;
+  padding: 1vw;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
-.project-grid div>img {
-    width: 100%;
-    border-radius: 1vw;
+.project-grid div > img {
+  width: 100%;
+  border-radius: 1vw;
 }
 
-.project-grid div>div {
-    display: grid;
-    grid-template-rows: max-content auto max-content;
-    grid-template-columns: auto;
-    padding: 0;
-    padding-left: 1vw;
-    grid-row-gap: .5vw
+.project-grid div > div {
+  display: grid;
+  grid-template-rows: max-content auto max-content;
+  grid-template-columns: auto;
+  padding: 0;
+  padding-left: 1vw;
+  grid-row-gap: 0.5vw;
 }
 
 header {
-    color: var(--vivid-sky-blue);
-    font-weight: bold;
-    font-family: 'lato', sans-serif;
-    font-size: 4vh;
-    margin: 0;
-    padding: 0;
+  color: var(--vivid-sky-blue);
+  font-weight: bold;
+  font-family: "lato", sans-serif;
+  font-size: 4vh;
+  margin: 0;
+  padding: 0;
 }
 
 description {
-    color: var(--snow);
-    text-overflow: ellipsis;
-    font-size: 1.5vh;
+  color: var(--snow);
+  text-overflow: ellipsis;
+  font-size: 1.5vh;
 }
 
-.project-grid div>div>a {
-    background-color: var(--lavender-blush);
-    padding: .5vw;
-    border-radius: 1vw;
-    color: var(--cherry-blossom-pink);
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    font-size: 1.5vh;
+.project-grid div > div > a {
+  background-color: var(--lavender-blush);
+  padding: 0.5vw;
+  border-radius: 1vw;
+  color: var(--cherry-blossom-pink);
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.5vh;
 }
 
-.project-grid div>div>a:hover {
-    background-color: var(--cherry-blossom-pink);
-    color: var(--lavender-blush);
+.project-grid div > div > a:hover {
+  background-color: var(--cherry-blossom-pink);
+  color: var(--lavender-blush);
 }
 
 @media (max-width: 1250px) {
-    .project-grid, .project-grid>div, .project-grid div>div {
-        grid-template-columns: 100%;
-        padding: 1vw;
-    }
-    .block2 {
-        grid-template-columns: 100%;
-        text-align: center;
-        padding: 0;
-        grid-template-rows: max-content auto;
-        padding-top: 3vw;
-    }
-    .block2 img {
-        width: 50vw;
-        height: 50vw;
-        left: 25%;
-        box-sizing: border-box;
-        position:relative;
-    }
+  .project-grid,
+  .project-grid > div,
+  .project-grid div > div {
+    grid-template-columns: 100%;
+    padding: 1vw;
+  }
+  .block2 {
+    grid-template-columns: 100%;
+    text-align: center;
+    padding: 0;
+    grid-template-rows: max-content auto;
+    padding-top: 3vw;
+    grid-row-gap: 3vw;
+  }
+  .block2 img {
+    width: 50vw;
+    height: 50vw;
+    left: 25%;
+    box-sizing: border-box;
+    position: relative;
+  }
 
-    .block2 p {
-        position: none;
-        right: 0;
-        width: 100%;
-        font-size: 6vh;
-        line-height: normal;
-    }
+  .block2 p {
+    position: none;
+    right: 0;
+    width: 100%;
+    font-size: 6vh;
+    line-height: normal;
+  }
 
-    .block2 p span {
-        font-size: 4vh;
-        line-height: 80%;
-        padding: 0;
-        margin: 0;
-    }
+  .block2 p span {
+    font-size: 4vh;
+    line-height: 80%;
+    padding: 0;
+    margin: 0;
+  }
 }
