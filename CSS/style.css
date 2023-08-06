@@ -2,6 +2,8 @@
 
 :root {
   --cherry-blossom-pink: #f5a9b8ff;
+  --cherry-blossom-pink-2: #f7b2c0ff;
+  --pink: #f8bbc8ff;
   --fairy-tale: #faccd7ff;
   --lavender-blush: #ffeff6ff;
   --snow: #fff7fbff;
@@ -96,6 +98,22 @@ body {
   grid-template-columns: 50% auto;
   text-align: right;
 }
+.block2 a {
+  font-size: 3vh;
+  background-color: transparent;
+  color: var(--vivid-sky-blue);
+  width: 3vh;
+  height: 3vh;
+  bottom: 3vw;
+  padding: 0.5vw;
+  position: absolute;
+  border-radius: 100%;
+  text-align: center;
+  left: calc(50vw - 2.5vh);
+  transition: 0.3s;
+  vertical-align: center;
+  box-sizing: content-box;
+}
 
 .block2 p {
   font-size: 10vh;
@@ -149,7 +167,7 @@ body {
 
 .block3 p span {
   font-size: 5vh;
-  color: var(--fairy-tale);
+  color: var(--cherry-blossom-pink-2);
 }
 
 .project-grid {
@@ -166,11 +184,11 @@ body {
 
 .project-grid div {
   width: auto;
-  background-color: var(--fairy-tale);
+  background-color: transparent;
   border-radius: 2vw;
   padding: 1vw;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
 }
 
 .project-grid div > img {
