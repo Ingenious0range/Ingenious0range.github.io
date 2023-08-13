@@ -13,6 +13,13 @@
   --uranian-blue: #a3e0fdff;
   --vivid-sky-blue: #5bcefaff;
   --darker-uranian-blue: rgb(23, 33, 37);
+  --black: #000000ff;
+  --night: #101010ff;
+  --eerie-black: #1f1f1fff;
+  --antiflash-white: rgb(207, 207, 207);
+  --antiflash-white-2: rgb(255, 255, 255);
+  --violet-web-color: rgb(255, 187, 253);
+  --ultra-pink: #ff6ffaff;
 }
 
 /*
