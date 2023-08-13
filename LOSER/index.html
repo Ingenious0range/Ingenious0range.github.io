@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/63cb2e29a5.js"
+        crossorigin="anonymous"></script>
+
+    <script>
+        window.onscroll = function() {scrollindicator()};
+
+        function scrollindicator() {
+          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var scrolled = (winScroll / height) * 100;
+          document.getElementById("progressBar").style.width = scrolled + "%";
+        } 
+
+        function alertfunc() {
+            alert("scoring doesn't work yet lol")
+        }
+    </script>
+</head>
+
+<body onload="alertfunc()">
+    <div class="sidebar">
+        <p>
+            <span>L</span><br>
+            <span>O</span>bjectively<br>
+            <span>S</span>tupid<br>
+            <span>E</span>xam<br>
+            <span>R</span>eview<br>
+        </p>
+        <p style="font-size: 4vh;">
+            Progress
+        </p>
+        <div class="progress-bar">
+            <div id="progressBar"></div>
+        </div>
+    </div>
+    <div class="question-panel">
+        <p>1. 2+2=</p>
+        <form>
+            <label class="container" id="1">🐠
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">4
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">22
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">2
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <p>2. 3+3=</p>
+        <form>
+            <label class="container">6
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">33
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container" id="2">8
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">3
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <p>3. what does the &lt;legend&gt; HTML tag do?</p>
+        <form>
+            <label class="container">6
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">33
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container" id="3">8
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">3
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <p>4. what's the best hex color code?</p>
+        <form>
+            <label class="container">#f65fa1
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container" id="4">#f56fa1
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">#fff16a
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">#abc842
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <p>5. what's the best greeting?</p>
+        <form>
+            <label class="container">haiiiiiii
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">hewwo
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">*waves*
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container" id="5">guten tag bitch(es)
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <p>6. what's the coolest number to say?</p>
+        <form>
+            <label class="container" id="6">fünf (five in german)
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">zwei (two in german)
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">three
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">three hundred and twenty-five
+                thousand
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <p>7. what's the worst cymbal on a drumset?</p>
+        <form>
+            <label class="container">crash
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">ride
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">hi-hat
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container" id="7">splash
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <p>8. uwu ___?</p>
+        <form>
+            <label class="container" id="8">comuwunism~
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">communism
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">:3
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">>:3
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <p>9. h means?</p>
+        <form>
+            <label class="container">H
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container" id="9">chairr
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">h
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">hehe chair
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+    </div>
+</body>
