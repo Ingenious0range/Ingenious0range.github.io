@@ -20,6 +20,28 @@
         }
     </script>
 </head>
+<style>
+    :root {
+  --black: #000000ff;
+  --night: #101010ff;
+  --eerie-black: #1f1f1fff;
+  --antiflash-white: rgb(207, 207, 207);
+  --antiflash-white-2: rgb(255, 255, 255);
+  --violet-web-color: rgb(255, 187, 253);
+  --ultra-pink: #ff6ffaff;
+}
+
+body {
+  background-color: var(--night);
+  color: var(--antiflash-white-2);
+  font-family: "Lato", sans-serif;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  padding: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+</style>
 
 <body onload="alertfunc()">
     <div class="sidebar">
