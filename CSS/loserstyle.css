@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --black: #000000ff;
+  --night: #101010ff;
+  --eerie-black: #1f1f1fff;
+  --antiflash-white: rgb(207, 207, 207);
+  --antiflash-white-2: rgb(255, 255, 255);
+  --violet-web-color: rgb(255, 187, 253);
+  --ultra-pink: #ff6ffaff;
+}
+
+body {
+  background-color: var(--night);
+  color: var(--antiflash-white-2);
+  font-family: "Lato", sans-serif;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  padding: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  background-color: var(--night);
+  height: 100%;
+  width: 25vw;
+  color: var(--antiflash-white);
+  left: 0;
+  top: 0;
+  position: fixed;
+  box-sizing: border-box;
+  padding: 3vw;
+  margin-bottom: 0;
+  overflow-x: hidden;
+}
+
+.sidebar p {
+  color: var(--violet-web-color);
+  font-size: 7vh;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.sidebar p > span {
+  color: var(--ultra-pink);
+  margin-bottom: 0;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: var(--eerie-black);
+  height: auto;
+  border-radius: 3vh;
+  margin-top: 0;
+  padding: 0.5vh;
+}
+
+.progress-bar div {
+  width: 5%;
+  background-color: var(--ultra-pink);
+  border-radius: 3vh;
+  height: 3vh;
+  min-width: 3vh;
+  transition: 0.5s;
+}
+
+.question-panel {
+  width: 70%;
+  height: 100vh;
+  background-color: var(--eerie-black);
+  height: auto;
+  padding: 3vw;
+  border-top-left-radius: 2vw;
+  border-bottom-left-radius: 2vw;
+  box-sizing: border-box;
+  top: 0;
+  left: 30vw;
+  position: absolute;
+  color: var(--antiflash-white);
+}
+
+.question-panel p {
+  color: var(--antiflash-white-2);
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 2vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--night);
+  border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: none;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--ultra-pink);
+}
+
+.container input:checked ~ .checkmark {
+  background-color: var(--ultra-pink);
+}
+
+.checkmark:after {
+  background-color: var(--ultra-pink);
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+  background-color: var(--eerie-black);
+}
+
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--night);
+}
