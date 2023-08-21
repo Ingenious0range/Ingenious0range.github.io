@@ -14,9 +14,10 @@
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             var scrolled = (winScroll / height) * 100;
             document.getElementById("progressBar").style.width = scrolled + "%";
+            document.getElementById("progressValue").innerHTML = Math.round(scrolled) + "%";
         } 
 
-        var answers = ["A","C","C","B","D","A","D","A","D","A","B","D","D","C","B","A","D","C","B"], 
+        var answers = ["A","C","C","B","D","A","D","A","D","A","B","D","D","C","B","A","D","C","B","A"], 
         tot = answers.length;
 
         function getCheckedValue( radioName ){
@@ -98,7 +99,7 @@ body {
             <span>R</span><br>
         </p>
         <p style="font-size: 4vh;">
-            Progress
+            Progress: <span id="progressValue">0%</span>
         </p>
         <div class="progress-bar">
             <div id="progressBar"></div>
@@ -494,6 +495,26 @@ body {
             </label>
             <label class="container">💕
                 <input type="radio" value="D" name="question18">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <p id="19">20. what potato is best</p>
+        <form>
+            <label class="container">🥔
+                <input type="radio" value="A" name="question19">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">🍠
+                <input type="radio" value="B" name="question19">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">🥔🍠
+                <input type="radio" value="C" name="question19">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">none of da above
+                <input type="radio" value="D" name="question19">
                 <span class="checkmark"></span>
             </label>
         </form>
