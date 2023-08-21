@@ -164,6 +164,7 @@ body {
   padding: 1vh 2vh;
   margin-top: 5vh;
   cursor: pointer;
+  outline: none;
   border: none;
 }
 
