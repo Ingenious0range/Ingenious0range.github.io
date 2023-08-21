@@ -41,6 +41,7 @@ body {
   font-weight: bold;
   text-overflow: ellipsis;
   width: 100%;
+  line-height: 100%;
 }
 
 .sidebar p > span {
@@ -79,6 +80,7 @@ body {
   left: 30vw;
   position: absolute;
   color: var(--antiflash-white);
+  z-index: 999;
 }
 
 .question-panel p {
@@ -147,4 +149,14 @@ body {
   height: 8px;
   border-radius: 50%;
   background: var(--night);
+}
+
+.submit-btn {
+  background-color: var(--ultra-pink);
+  color: var(--eerie-black);
+  border-radius: 5vw;
+  font-size: 2vh;
+  padding: 1vh 2vh;
+  margin-top: 5vh;
+  cursor: pointer;
 }

@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" href="./LOSER/style.css">
     <link rel="stylesheet" href="/CSS/loserstyle.css">
+    <title>LOSER, a stupid version of an iq test</title>
     <script src="https://kit.fontawesome.com/63cb2e29a5.js"
         crossorigin="anonymous"></script>
 
@@ -9,19 +10,39 @@
         window.onscroll = function() {scrollindicator()};
 
         function scrollindicator() {
-          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("progressBar").style.width = scrolled + "%";
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
         } 
 
-        function alertfunc() {
-            alert("scoring isn't implemented yet sorry :c");
+        var answers = ["A","C","C","B","D","A","D","A","D","A","B","D","D","C","B","A","D",], 
+        tot = answers.length;
+
+        function getCheckedValue( radioName ){
+            var radios = document.getElementsByName( radioName ); // Get radio group by-name
+            for(var y=0; y<radios.length; y++)
+            if(radios[y].checked) return radios[y].value; // return the checked value
         }
+
+        function getScore(){
+            var score = 0;
+            for (var i=0; i<tot; i++)
+            if(getCheckedValue("question"+i)===answers[i]) score += 1; // increment only
+            return score;
+        }
+
+        function returnScore(){
+            var scoreReturn = getScore();
+            var barWidth = (scoreReturn / tot) * 100;
+            document.getElementById("scoreBar").style.width = barWidth + "%";
+            document.getElementById("displayScore").innerHTML = Math.round(barWidth) + "%";
+        }
+        
     </script>
 </head>
 <style>
-    :root {
+:root {
   --black: #000000ff;
   --night: #101010ff;
   --eerie-black: #1f1f1fff;
@@ -43,9 +64,9 @@ body {
 }
 </style>
 
-<body onload="alertfunc()">
+<body>
     <div class="sidebar">
-        <p>
+        <p style="line-height: 100%;">
             <span>L</span><br>
             <span>O</span>bjectively<br>
             <span>S</span>tupid<br>
@@ -58,24 +79,31 @@ body {
         <div class="progress-bar">
             <div id="progressBar"></div>
         </div>
+
+        <p style="font-size: 4vh;">
+            Score: <span id="displayScore">you can't see it until you're done lol</span>
+        </p>
+        <div class="progress-bar">
+            <div id="scoreBar"></div>
+        </div>
     </div>
     <div class="question-panel">
         <p>1. 2+2=</p>
         <form>
-            <label class="container" id="1">🐠
-                <input type="radio" name="radio">
+            <label class="container">🐠
+                <input type="radio" value="A" name="question0">
                 <span class="checkmark"></span>
             </label>
             <label class="container">4
-                <input type="radio" name="radio">
+                <input type="radio" value="B" name="question0">
                 <span class="checkmark"></span>
             </label>
             <label class="container">22
-                <input type="radio" name="radio">
+                <input type="radio" value="C" name="question0">
                 <span class="checkmark"></span>
             </label>
             <label class="container">2
-                <input type="radio" name="radio">
+                <input type="radio" value="D" name="question0">
                 <span class="checkmark"></span>
             </label>
         </form>
@@ -83,19 +111,19 @@ body {
         <p>2. 3+3=</p>
         <form>
             <label class="container">6
-                <input type="radio" name="radio">
+                <input type="radio" value="A" name="question1">
                 <span class="checkmark"></span>
             </label>
             <label class="container">33
-                <input type="radio" name="radio">
+                <input type="radio" value="B" name="question1">
                 <span class="checkmark"></span>
             </label>
-            <label class="container" id="2">8
-                <input type="radio" name="radio">
+            <label class="container">8
+                <input type="radio" value="C" name="question1">
                 <span class="checkmark"></span>
             </label>
             <label class="container">3
-                <input type="radio" name="radio">
+                <input type="radio" value="D" name="question1">
                 <span class="checkmark"></span>
             </label>
         </form>
@@ -103,20 +131,21 @@ body {
         <p>3. what does the &lt;legend&gt; HTML tag do?</p>
         <form>
             <label class="container">makes a cool story
-                <input type="radio" name="radio">
+                <input type="radio" value="A" name="question2">
                 <span class="checkmark"></span>
             </label>
-            <label class="container">lets you have an existential crisis
-                <input type="radio" name="radio">
+            <label class="container">lets you have an existential
+                crisis
+                <input type="radio" value="B" name="question2">
                 <span class="checkmark"></span>
             </label>
-            <label class="container" id="3">defines the caption for
+            <label class="container">defines the caption for
                 &lt;fieldset&gt;
-                <input type="radio" name="radio">
+                <input type="radio" value="C" name="question2">
                 <span class="checkmark"></span>
             </label>
             <label class="container">banana
-                <input type="radio" name="radio">
+                <input type="radio" value="D" name="question2">
                 <span class="checkmark"></span>
             </label>
         </form>
@@ -124,19 +153,19 @@ body {
         <p>4. what's the best hex color code?</p>
         <form>
             <label class="container">#f65fa1
-                <input type="radio" name="radio">
+                <input type="radio" value="A" name="question3">
                 <span class="checkmark"></span>
             </label>
-            <label class="container" id="4">#f56fa1
-                <input type="radio" name="radio">
+            <label class="container">#f56fa1
+                <input type="radio" value="B" name="question3">
                 <span class="checkmark"></span>
             </label>
             <label class="container">#fff16a
-                <input type="radio" name="radio">
+                <input type="radio" value="C" name="question3">
                 <span class="checkmark"></span>
             </label>
             <label class="container">#abc842
-                <input type="radio" name="radio">
+                <input type="radio" value="D" name="question3">
                 <span class="checkmark"></span>
             </label>
         </form>
@@ -144,40 +173,40 @@ body {
         <p>5. what's the best greeting?</p>
         <form>
             <label class="container">haiiiiiii
-                <input type="radio" name="radio">
+                <input type="radio" value="A" name="question4">
                 <span class="checkmark"></span>
             </label>
             <label class="container">hewwo
-                <input type="radio" name="radio">
+                <input type="radio" value="B" name="question4">
                 <span class="checkmark"></span>
             </label>
             <label class="container">*waves*
-                <input type="radio" name="radio">
+                <input type="radio" value="C" name="question4">
                 <span class="checkmark"></span>
             </label>
-            <label class="container" id="5">guten tag bitch(es)
-                <input type="radio" name="radio">
+            <label class="container">guten tag bitch(es)
+                <input type="radio" value="D" name="question4">
                 <span class="checkmark"></span>
             </label>
         </form>
 
         <p>6. what's the coolest number to say?</p>
         <form>
-            <label class="container" id="6">fünf (five in german)
-                <input type="radio" name="radio">
+            <label class="container">fünf (five in german)
+                <input type="radio" value="A" name="question5">
                 <span class="checkmark"></span>
             </label>
             <label class="container">zwei (two in german)
-                <input type="radio" name="radio">
+                <input type="radio" value="B" name="question5">
                 <span class="checkmark"></span>
             </label>
             <label class="container">three
-                <input type="radio" name="radio">
+                <input type="radio" value="C" name="question5">
                 <span class="checkmark"></span>
             </label>
             <label class="container">three hundred and twenty-five
                 thousand
-                <input type="radio" name="radio">
+                <input type="radio" value="D" name="question5">
                 <span class="checkmark"></span>
             </label>
         </form>
@@ -185,39 +214,39 @@ body {
         <p>7. what's the worst cymbal on a drumset?</p>
         <form>
             <label class="container">crash
-                <input type="radio" name="radio">
+                <input type="radio" value="A" name="question6">
                 <span class="checkmark"></span>
             </label>
             <label class="container">ride
-                <input type="radio" name="radio">
+                <input type="radio" value="B" name="question6">
                 <span class="checkmark"></span>
             </label>
             <label class="container">hi-hat
-                <input type="radio" name="radio">
+                <input type="radio" value="C" name="question6">
                 <span class="checkmark"></span>
             </label>
-            <label class="container" id="7">splash
-                <input type="radio" name="radio">
+            <label class="container">splash
+                <input type="radio" value="D" name="question6">
                 <span class="checkmark"></span>
             </label>
         </form>
 
         <p>8. uwu ___?</p>
         <form>
-            <label class="container" id="8">comuwunism~
-                <input type="radio" name="radio">
+            <label class="container">comuwunism~
+                <input type="radio" value="A" name="question7">
                 <span class="checkmark"></span>
             </label>
             <label class="container">communism
-                <input type="radio" name="radio">
+                <input type="radio" value="B" name="question7">
                 <span class="checkmark"></span>
             </label>
             <label class="container">:3
-                <input type="radio" name="radio">
+                <input type="radio" value="C" name="question7">
                 <span class="checkmark"></span>
             </label>
             <label class="container">>:3
-                <input type="radio" name="radio">
+                <input type="radio" value="D" name="question7">
                 <span class="checkmark"></span>
             </label>
         </form>
@@ -225,39 +254,39 @@ body {
         <p>9. h means?</p>
         <form>
             <label class="container">H
-                <input type="radio" name="radio">
+                <input type="radio" value="A" name="question8">
                 <span class="checkmark"></span>
             </label>
-            <label class="container" id="9">chairr
-                <input type="radio" name="radio">
+            <label class="container">chairr
+                <input type="radio" value="B" name="question8">
                 <span class="checkmark"></span>
             </label>
             <label class="container">h
-                <input type="radio" name="radio">
+                <input type="radio" value="C" name="question8">
                 <span class="checkmark"></span>
             </label>
             <label class="container">hehe chair
-                <input type="radio" name="radio">
+                <input type="radio" value="D" name="question8">
                 <span class="checkmark"></span>
             </label>
         </form>
 
         <p>10. guess what guess what ___?</p>
         <form>
-            <label class="container" id="10">i lost chess game :c
-                <input type="radio" name="radio">
+            <label class="container">i lost chess game :c
+                <input type="radio" value="A" name="question9">
                 <span class="checkmark"></span>
             </label>
             <label class="container">i want ded
-                <input type="radio" name="radio">
+                <input type="radio" value="B" name="question9">
                 <span class="checkmark"></span>
             </label>
             <label class="container">hehe girls so pretty
-                <input type="radio" name="radio">
+                <input type="radio" value="C" name="question9">
                 <span class="checkmark"></span>
             </label>
             <label class="container">banana :p
-                <input type="radio" name="radio">
+                <input type="radio" value="D" name="question9">
                 <span class="checkmark"></span>
             </label>
         </form>
@@ -265,19 +294,19 @@ body {
         <p>11. aaaaaa ___?</p>
         <form>
             <label class="container">AaAaAaaa
-                <input type="radio" name="radio">
+                <input type="radio" value="A" name="question10">
                 <span class="checkmark"></span>
             </label>
             <label class="container">aaaaaaaa
-                <input type="radio" name="radio">
+                <input type="radio" value="B" name="question10">
                 <span class="checkmark"></span>
             </label>
-            <label class="container" id="11">:c
-                <input type="radio" name="radio">
+            <label class="container">:c
+                <input type="radio" value="C" name="question10">
                 <span class="checkmark"></span>
             </label>
             <label class="container">a
-                <input type="radio" name="radio">
+                <input type="radio" value="D" name="question10">
                 <span class="checkmark"></span>
             </label>
         </form>
@@ -285,19 +314,19 @@ body {
         <p>12. b___?</p>
         <form>
             <label class="container">eep
-                <input type="radio" name="radio">
+                <input type="radio" value="A" name="question11">
                 <span class="checkmark"></span>
             </label>
             <label class="container">aaaaaaaaaaaaaaa
-                <input type="radio" name="radio">
+                <input type="radio" value="B" name="question11">
                 <span class="checkmark"></span>
             </label>
             <label class="container">anananananana
-                <input type="radio" name="radio">
+                <input type="radio" value="C" name="question11">
                 <span class="checkmark"></span>
             </label>
-            <label class="container" id="12">ananadanana
-                <input type="radio" name="radio">
+            <label class="container">ananadanana
+                <input type="radio" value="D" name="question11">
                 <span class="checkmark"></span>
             </label>
         </form>
@@ -305,22 +334,106 @@ body {
         <p>13. girls so ___?</p>
         <form>
             <label class="container">cute :D
-                <input type="radio" name="radio">
+                <input type="radio" value="A" name="question12">
                 <span class="checkmark"></span>
             </label>
             <label class="container">🥰🥰🥰🥰🥰🥰🥰🥰💕🏳️‍🌈
-                <input type="radio" name="radio">
+                <input type="radio" value="B" name="question12">
                 <span class="checkmark"></span>
             </label>
             <label class="container">prettyyyyyyyyyy and cute hehe
-                <input type="radio" name="radio">
+                <input type="radio" value="C" name="question12">
                 <span class="checkmark"></span>
             </label>
-            <label class="container" id="13">pretty and cute and cute and and
+            <label class="container">pretty and cute and cute
+                and and
                 and 🥰🥰
-                <input type="radio" name="radio">
+                <input type="radio" value="D" name="question12">
                 <span class="checkmark"></span>
             </label>
         </form>
+
+        <p>14. :3?</p>
+        <form>
+            <label class="container">hehehehehe
+                <input type="radio" value="A" name="question13">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">hehe
+                <input type="radio" value="B" name="question13">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">:giggle:
+                <input type="radio" value="C" name="question13">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">*giggling*
+                <input type="radio" value="D" name="question13">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <p>15. what's python?</p>
+        <form>
+            <label class="container">eh :|
+                <input type="radio" value="A" name="question14">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container"><i>*vomiting*</i>
+                <input type="radio" value="B" name="question14">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">amazing
+                <input type="radio" value="C" name="question14">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">a burning pile of dog
+                shit 🔥💩💩💩
+                <input type="radio" value="D" name="question14">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <p>16. n___ :c?</p>
+        <form>
+            <label class="container">(n)ooooooooooooooooooo
+                <input type="radio" value="A" name="question15">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">(n)yaa
+                <input type="radio" value="B" name="question15">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">(n)yet
+                <input type="radio" value="C" name="question15">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">(n)ein
+                <input type="radio" value="D" name="question15">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+
+        <p>17. find the missing number: 1,2,3,4,_,5,6,7,8,9?</p>
+        <form>
+            <label class="container">4.5
+                <input type="radio" value="A" name="question16">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">5
+                <input type="radio" value="B" name="question16">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">4
+                <input type="radio" value="C" name="question16">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">banana
+                <input type="radio" value="D" name="question16">
+                <span class="checkmark"></span>
+            </label>
+        </form>
+        <br>
+        <a class="submit-btn" onclick="returnScore()">Submit</a>
     </div>
 </body>
