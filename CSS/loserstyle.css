@@ -91,6 +91,7 @@ body {
   position: relative;
   left: -0.5vw;
   border-radius: 0.5vw;
+  transition: 0.3s;
 }
 
 .container {
