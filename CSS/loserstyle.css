@@ -87,6 +87,10 @@ body {
   color: var(--antiflash-white-2);
   font-size: 3vh;
   font-weight: bold;
+  padding: 0.5vw;
+  position: relative;
+  left: -0.5vw;
+  border-radius: 0.5vw;
 }
 
 .container {

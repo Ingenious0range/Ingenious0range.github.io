@@ -27,9 +27,33 @@
 
         function getScore(){
             var score = 0;
-            for (var i=0; i<tot; i++)
-            if(getCheckedValue("question"+i)===answers[i]) score += 1; // increment only
+            for (var i=0; i<tot; i++) {
+            if (getCheckedValue("question"+i)===answers[i]) {
+                score += 1;
+                scoring(i,1);
+            } else {
+                scoring(i,0);
+            }
+        }
             return score;
+        }
+
+        function scoring(question, x) {
+            console.log(question + ". value: " + translator(x));
+            if (x == 0){
+                document.getElementById(question).style.backgroundColor = "#AB0C0C";
+            } else {
+                document.getElementById(question).style.backgroundColor = "#086808";
+            }
+            
+        }
+
+        function translator(y) {
+            if (y == 1) {
+                return "correct";
+            } else {
+                return "incorrect";
+            }
         }
 
         function returnScore(){
@@ -88,7 +112,7 @@ body {
         </div>
     </div>
     <div class="question-panel">
-        <p>1. 2+2=</p>
+        <p id="0">1. 2+2=</p>
         <form>
             <label class="container">🐠
                 <input type="radio" value="A" name="question0">
@@ -108,7 +132,7 @@ body {
             </label>
         </form>
 
-        <p>2. 3+3=</p>
+        <p id="1">2. 3+3=</p>
         <form>
             <label class="container">6
                 <input type="radio" value="A" name="question1">
@@ -128,7 +152,7 @@ body {
             </label>
         </form>
 
-        <p>3. what does the &lt;legend&gt; HTML tag do?</p>
+        <p id="2">3. what does the &lt;legend&gt; HTML tag do?</p>
         <form>
             <label class="container">makes a cool story
                 <input type="radio" value="A" name="question2">
@@ -150,7 +174,7 @@ body {
             </label>
         </form>
 
-        <p>4. what's the best hex color code?</p>
+        <p id="3">4. what's the best hex color code?</p>
         <form>
             <label class="container">#f65fa1
                 <input type="radio" value="A" name="question3">
@@ -170,7 +194,7 @@ body {
             </label>
         </form>
 
-        <p>5. what's the best greeting?</p>
+        <p id="4">5. what's the best greeting?</p>
         <form>
             <label class="container">haiiiiiii
                 <input type="radio" value="A" name="question4">
@@ -190,7 +214,7 @@ body {
             </label>
         </form>
 
-        <p>6. what's the coolest number to say?</p>
+        <p id="5">6. what's the coolest number to say?</p>
         <form>
             <label class="container">fünf (five in german)
                 <input type="radio" value="A" name="question5">
@@ -211,7 +235,7 @@ body {
             </label>
         </form>
 
-        <p>7. what's the worst cymbal on a drumset?</p>
+        <p id="6">7. what's the worst cymbal on a drumset?</p>
         <form>
             <label class="container">crash
                 <input type="radio" value="A" name="question6">
@@ -231,7 +255,7 @@ body {
             </label>
         </form>
 
-        <p>8. uwu ___?</p>
+        <p id="7">8. uwu ___?</p>
         <form>
             <label class="container">comuwunism~
                 <input type="radio" value="A" name="question7">
@@ -251,7 +275,7 @@ body {
             </label>
         </form>
 
-        <p>9. h means?</p>
+        <p id="8">9. h means?</p>
         <form>
             <label class="container">H
                 <input type="radio" value="A" name="question8">
@@ -271,7 +295,7 @@ body {
             </label>
         </form>
 
-        <p>10. guess what guess what ___?</p>
+        <p id="9">10. guess what guess what ___?</p>
         <form>
             <label class="container">i lost chess game :c
                 <input type="radio" value="A" name="question9">
@@ -291,7 +315,7 @@ body {
             </label>
         </form>
 
-        <p>11. aaaaaa ___?</p>
+        <p id="10">11. aaaaaa ___?</p>
         <form>
             <label class="container">AaAaAaaa
                 <input type="radio" value="A" name="question10">
@@ -311,7 +335,7 @@ body {
             </label>
         </form>
 
-        <p>12. b___?</p>
+        <p id="11">12. b___?</p>
         <form>
             <label class="container">eep
                 <input type="radio" value="A" name="question11">
@@ -331,7 +355,7 @@ body {
             </label>
         </form>
 
-        <p>13. girls so ___?</p>
+        <p id="12">13. girls so ___?</p>
         <form>
             <label class="container">cute :D
                 <input type="radio" value="A" name="question12">
@@ -353,7 +377,7 @@ body {
             </label>
         </form>
 
-        <p>14. :3?</p>
+        <p id="13">14. :3?</p>
         <form>
             <label class="container">hehehehehe
                 <input type="radio" value="A" name="question13">
@@ -373,7 +397,7 @@ body {
             </label>
         </form>
 
-        <p>15. what's python?</p>
+        <p id="14">15. what's python?</p>
         <form>
             <label class="container">eh :|
                 <input type="radio" value="A" name="question14">
@@ -394,7 +418,7 @@ body {
             </label>
         </form>
 
-        <p>16. n___ :c?</p>
+        <p id="15">16. n___ :c?</p>
         <form>
             <label class="container">(n)ooooooooooooooooooo
                 <input type="radio" value="A" name="question15">
@@ -414,7 +438,7 @@ body {
             </label>
         </form>
 
-        <p>17. find the missing number: 1,2,3,4,_,5,6,7,8,9?</p>
+        <p id="16">17. find the missing number: 1,2,3,4,_,5,6,7,8,9?</p>
         <form>
             <label class="container">4.5
                 <input type="radio" value="A" name="question16">
@@ -434,7 +458,7 @@ body {
             </label>
         </form>
 
-        <p>18. 🥺👉👈 means what?</p>
+        <p id="17">18. 🥺👉👈 means what?</p>
         <form>
             <label class="container">me want cuddles
                 <input type="radio" value="A" name="question17">
@@ -454,7 +478,7 @@ body {
             </label>
         </form>
 
-        <p>19. best flag?</p>
+        <p id="18">19. best flag?</p>
         <form>
             <label class="container">🏳️‍⚧️
                 <input type="radio" value="A" name="question18">
