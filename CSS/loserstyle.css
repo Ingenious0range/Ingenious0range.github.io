@@ -163,4 +163,10 @@ body {
   padding: 1vh 2vh;
   margin-top: 5vh;
   cursor: pointer;
+  border: none;
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

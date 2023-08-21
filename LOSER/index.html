@@ -58,10 +58,14 @@
         }
 
         function returnScore(){
-            var scoreReturn = getScore();
-            var barWidth = (scoreReturn / tot) * 100;
-            document.getElementById("scoreBar").style.width = barWidth + "%";
-            document.getElementById("displayScore").innerHTML = Math.round(barWidth) + "%";
+            document.getElementById("submitBtn").setAttribute("disabled", "disabled");
+            if (document.getElementById("submitBtn").disabled !== "disabled") {
+                var scoreReturn = getScore();
+                var barWidth = (scoreReturn / tot) * 100;
+                document.getElementById("scoreBar").style.width = barWidth + "%";
+                document.getElementById("displayScore").innerHTML = Math.round(barWidth) + "%";
+            }
+            
         }
         
     </script>
@@ -519,6 +523,6 @@ body {
             </label>
         </form>
         <br>
-        <a class="submit-btn" onclick="returnScore()">Submit</a>
+        <button class="submit-btn" id="submitBtn" onclick="returnScore()">Submit</button>
     </div>
 </body>
