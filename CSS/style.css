@@ -191,11 +191,11 @@ body {
 
 .project-grid div {
   width: auto;
-  background-color: transparent;
+  background-color: var(--pink);
   border-radius: 2vw;
   padding: 1vw;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-columns: 40% auto;
 }
 
 .project-grid div > img {
@@ -224,7 +224,7 @@ header {
 description {
   color: var(--snow);
   text-overflow: ellipsis;
-  font-size: 1.5vh;
+  font-size: 2vh;
 }
 
 .project-grid div > div > a {
@@ -235,7 +235,8 @@ description {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
-  font-size: 1.5vh;
+  font-size: 2vh;
+  text-decoration: none;
 }
 
 .project-grid div > div > a:hover {

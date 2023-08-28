@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <script src="https://kit.fontawesome.com/5565897852.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/TURD/style.css">
+    <title>TURD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+        rel="stylesheet">
+
+    <script>
+
+        const numbers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        const probability = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        let stopVar = 0;
+
+        function stopFunction() {
+            stopVar = 1;
+            console.log("stopped");
+        }
+
+        function thingy() {
+            i = 0;
+            let total = 0;
+
+            while (i < 1000) {
+                i = i + 1;
+                num = (Math.floor(Math.random() * 6 + 1)) + (Math.floor(Math.random() * 6 + 1));
+
+                numbers[num]++;
+
+                document.getElementById(num + "Num").innerHTML = numbers[num];
+            }
+
+            for (let i = 2; i < numbers.length; i++) {
+                total += numbers[i];
+            }
+
+            document.getElementById("totalNum").innerHTML = total;
+
+            maxSoFar = 0
+
+            for (let i = 2; i < probability.length; i++) {
+                probNum = (numbers[i] / total) * 100;
+
+                probability[i] = probNum.toFixed(2);
+
+                if (probNum > maxSoFar){
+                    maxSoFar = probNum;
+                }
+            }
+            
+            scale = 5;
+
+            if (maxSoFar > 1) {
+                scale = maxSoFar / 100 * 18;
+            }
+
+            for (let i = 2; i < probability.length; i++) {
+                document.getElementById(i + "Prob").innerHTML = probability[i] + "%";
+                document.getElementById(i + "Bar").innerHTML = probability[i] + "%";
+                document.getElementById(i + "Bar").style.height = probability[i] * scale + "%";            
+            }
+            if(stopVar == 0){
+                const myTimeout = setTimeout(thingy, 1);
+                console.log(stopVar);
+                stopVar = 0
+            } else {
+                stopVar = 0;
+            }
+
+
+        }
+
+        
+    </script>
+</head>
+
+<body>
+    <div class="left-side">
+        <h1>Thing <span style="color: #EBD0FF">that</span> Uselessly Rolls Dice
+            <span style="color: #EBD0FF">(TURD)</span></h1>
+
+        <a class="button" onclick="thingy()">Roll Dice</a>
+        <a class="button" style="bottom:0; position:absolute;"
+            onclick="stopFunction()">Stop Dice Rolling</a>
+
+    </div>
+    <div class="right-side">
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Times Rolled</th>
+                <th>Probability</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th id="2Num">0</th>
+                <th id="2Prob">0%</th>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th id="3Num">0</th>
+                <th id="3Prob">0%</th>
+            </tr>
+            <tr>
+                <th>4</th>
+                <th id="4Num">0</th>
+                <th id="4Prob">0%</th>
+            </tr>
+            <tr>
+                <th>5</th>
+                <th id="5Num">0</th>
+                <th id="5Prob">0%</th>
+            </tr>
+            <tr>
+                <th>6</th>
+                <th id="6Num">0</th>
+                <th id="6Prob">0%</th>
+            </tr>
+            <tr>
+                <th>7</th>
+                <th id="7Num">0</th>
+                <th id="7Prob">0%</th>
+            </tr>
+            <tr>
+                <th>8</th>
+                <th id="8Num">0</th>
+                <th id="8Prob">0%</th>
+            </tr>
+            <tr>
+                <th>9</th>
+                <th id="9Num">0</th>
+                <th id="9Prob">0%</th>
+            </tr>
+            <tr>
+                <th>10</th>
+                <th id="10Num">0</th>
+                <th id="10Prob">0%</th>
+            </tr>
+            <tr>
+                <th>11</th>
+                <th id="11Num">0</th>
+                <th id="11Prob">0%</th>
+            </tr>
+            <tr>
+                <th>12</th>
+                <th id="12Num">0</th>
+                <th id="12Prob">0%</th>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <th id="totalNum">0</th>
+                <th id="totalProb">100%</th>
+            </tr>
+        </table>
+
+        <div class="graph-container" id="cont">
+            <div class="bar" id="2Bar">0%</div>
+            <div class="bar" id="3Bar">0%</div>
+            <div class="bar" id="4Bar">0%</div>
+            <div class="bar" id="5Bar">0%</div>
+            <div class="bar" id="6Bar">0%</div>
+            <div class="bar" id="7Bar">0%</div>
+            <div class="bar" id="8Bar">0%</div>
+            <div class="bar" id="9Bar">0%</div>
+            <div class="bar" id="10Bar">0%</div>
+            <div class="bar" id="11Bar">0%</div>
+            <div class="bar" id="12Bar">0%</div>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6</p>
+            <p>7</p>
+            <p>8</p>
+            <p>9</p>
+            <p>10</p>
+            <p>11</p>
+            <p>12</p>
+        </div>
+    </div>
+</body>

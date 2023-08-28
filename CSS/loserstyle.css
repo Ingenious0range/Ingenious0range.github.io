@@ -107,6 +107,11 @@ body {
   user-select: none;
 }
 
+.container:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .container input {
   position: absolute;
   opacity: 0;

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/surprise/style.css">
+        <link rel="apple-touch-icon" sizes="180x180"
+            href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16"
+            href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
+        <script src="https://kit.fontawesome.com/b114d22e0b.js"
+            crossorigin="anonymous"></script>
+        <title>my favourite things about you</title>
+    </head>
+    <body onload="cycle()">
+        <div class="top">
+            <p>my favourite things about you <span class="slightly-darker"><i
+                        class="fa-solid fa-heart"></i></span></p>
+        </div>
+
+        <div class="bottom">
+            <p>you are:</p>
+            <div id="insertHere"></div>
+
+        </div>
+
+        <script>
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function cycle() {
+
+            const array = [
+                'pretty', 
+                'kind', 
+                'sweet', 
+                'helpful', 
+                'caring', 
+                'considerate', 
+                'selfless', 
+                'cute', 
+                'amazing', 
+                'wonderful', 
+                'talented', 
+                'my best friend', 
+                'cool', 
+                'unique',
+                'valid',
+                'schön',
+                'adorable',
+                'creative',
+                'dependable',
+                'deserving',
+                'honest',
+                'likable',
+                'real',
+                'smart',
+                'super',
+                'warm',
+
+            ];
+
+            for (let i = 0; i < array.length; i++) {
+                insert = document.getElementById('insertHere');
+                let compliment = document.createElement("p");
+                compliment.innerText = array[i];
+                compliment.setAttribute('id', 'compliment');
+                compliment.setAttribute('class', 'animated-text');
+                insert.insertAdjacentElement('afterbegin', compliment);
+                console.log(i);
+                await sleep(5000);
+                document.getElementById('compliment').innerText = '';
+            }
+
+            cycle();
+        }
+    </script>
+    </body>
+</html>

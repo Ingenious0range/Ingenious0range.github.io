@@ -1,0 +1,124 @@
+/* CSS HEX */
+:root{
+    --electric-violet: #9000ffff;
+    --indigo: #480080ff;
+    --russian-violet: #240040ff;
+    --dark-purple: #120020ff;
+    --licorice: #090010ff;
+    --black: #000000ff;
+    --white: #ffffff;
+    --pale-purple: #FCF8FF;
+}
+
+body{
+    background-color: var(--licorice);
+    overflow-x: hidden;
+}
+
+.left-side {
+    width: 30vw;
+    height: 100%;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    position: fixed;
+    color: var(--pale-purple);
+    font-family: 'Roboto', sans-serif;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 5vh;
+    font-size: 5vh;
+}
+
+.right-side{
+    width: 70vw;
+    height: auto;
+    position: relative;
+    left: 30vw;
+    border-top-left-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+    background-color: var(--dark-purple);
+    top: -9px;
+    color: var(--pale-purple);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 3vw 3vw;
+}
+
+table {
+    width: 100%;
+    padding: 10px 10px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 1vw;
+}
+
+th {
+    padding: 10px 14px;
+
+}
+
+tr{
+    border-radius: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--russian-violet);
+    border-radius: 10px;
+}
+
+th:nth-child(even) {
+    border-radius: 10px;
+}
+
+.graph-container {
+    background-color: var(--russian-violet);
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: 90% auto;
+    grid-column-gap: 1vw;
+    padding: 1vw 1vw;
+    box-sizing: border-box;
+    border-radius: 2vw;
+    font-family: 'Roboto', sans-serif;
+    align-items: end;
+    min-height: 50vh;
+}
+
+.graph-container p,div {
+    width: auto;
+}
+
+.bar {
+    width: auto;
+    background-color: var(--dark-purple);
+    height: 20px;
+    padding: 10px 10px;
+    border-radius: 1vw;
+    align-self: bottom;
+    vertical-align: bottom;
+    min-height: 20px;
+}
+
+
+
+.button {
+    width: 24vw;
+    box-sizing: border-box;
+    height: auto;
+    text-align: center;
+    color: var(--pale-purple);
+    background-color: var(--russian-violet);
+    padding: 14px 16px;
+    border-radius: 3vh;
+    cursor: pointer;
+    box-shadow: 0 9px var(--dark-purple);
+    user-select: none;
+    position:absolute
+}
+
+.button:active {
+    box-shadow: 0 5px var(--dark-purple);
+    transform: translateY(4px);
+}
