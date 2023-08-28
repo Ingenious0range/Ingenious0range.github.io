@@ -106,20 +106,10 @@ body {
   text-align: right;
 }
 .block2 a {
-  font-size: 3vh;
-  background-color: transparent;
+  font-size: 4vh;
   color: var(--vivid-sky-blue);
-  width: 3vh;
-  height: 3vh;
-  bottom: 3vw;
-  padding: 0.5vw;
-  position: absolute;
-  border-radius: 100%;
-  text-align: center;
-  left: calc(50vw - 2.5vh);
-  transition: 0.3s;
-  vertical-align: center;
-  box-sizing: content-box;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .block2 p {
