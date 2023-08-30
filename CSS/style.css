@@ -209,6 +209,13 @@ header {
   font-size: 4vh;
   margin: 0;
   padding: 0;
+  line-height: 70%;
+}
+
+header > span {
+  font-size: 2.5vh;
+  color: var(--uranian-blue);
+  line-height: 10%;
 }
 
 description {
