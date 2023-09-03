@@ -34,6 +34,7 @@ body {
   background-color: var(--white);
   font-family: "Lato", sans-serif;
   height: 200vh;
+  overflow-x: hidden;
 }
 
 .landingHeader {
@@ -214,8 +215,12 @@ header {
 
 header > span {
   font-size: 2.5vh;
-  color: var(--uranian-blue);
+  color: var(--alice-blue-2);
   line-height: 10%;
+}
+
+header > span > i {
+  color: var(--uranian-blue);
 }
 
 description {
@@ -236,7 +241,8 @@ description {
   text-decoration: none;
 }
 
-.project-grid div > div > a:hover {
+.project-grid div > div > a:hover,
+.project-grid div > div > a > i:hover {
   background-color: var(--cherry-blossom-pink);
   color: var(--lavender-blush);
 }
