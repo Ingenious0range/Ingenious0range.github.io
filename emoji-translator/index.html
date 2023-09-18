@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"
+            crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>emoji translator</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="./index.js"></script>
+        <script src="./emojis-names.js"></script>
+        <script src="./emojis.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                emoji translator <span>v 0.1.0-alpha</span>
+                <br>
+                <span>🔠 ➡️ 😀</span>
+            </h1>
+        </header>
+        <div class="main">
+            <div>
+                <p>
+                    input text
+                </p>
+                <textarea id="input" style="margin-bottom: 2vh;"
+                    placeholder="input text here"></textarea>
+                <a onclick="parseText(document.getElementById('input').value)">translate
+                    🍌</a>
+            </div>
+            <div>
+                <p>
+                    output emojis
+                </p>
+                <div class="emojis-output">
+                    <p id="outputTextArea"></p>
+                </div>
+            </div>
+
+        </div>
+    </body>
+    <script>
+        twemoji.parse(document.body);
+    </script>
+</html>
