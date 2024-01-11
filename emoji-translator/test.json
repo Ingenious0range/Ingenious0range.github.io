@@ -1,0 +1,195 @@
+[
+	{
+		"meta": {
+			"id": "navel",
+			"uuid": "8aa1b9d1-0c18-4782-9b1e-0351b295aa67",
+			"src": "coll_thes",
+			"section": "alpha",
+			"target": {
+				"tuuid": "ab66c723-e397-40a9-b2ff-aec66e7bfa6e",
+				"tsrc": "collegiate"
+			},
+			"stems": ["navel", "navel orange", "navels"],
+			"syns": [["axis", "base", "capital", "center", "central", "core", "cynosure", "epicenter", "eye", "focus", "ground zero", "heart", "hub", "locus", "mecca", "nerve center", "nexus", "nucleus", "omphalos", "seat"]],
+			"ants": [],
+			"offensive": false
+		},
+		"hwi": {
+			"hw": "navel"
+		},
+		"fl": "noun",
+		"def": [
+			{
+				"sseq": [
+					[
+						[
+							"sense",
+							{
+								"dt": [
+									["text", "a thing or place that is of greatest importance to an activity or interest "],
+									[
+										"vis",
+										[
+											{
+												"t": "a city that likes to regard itself as the nation's {it}navel{/it} of art and culture"
+											}
+										]
+									]
+								],
+								"syn_list": [
+									[
+										{
+											"wd": "axis"
+										},
+										{
+											"wd": "base"
+										},
+										{
+											"wd": "capital"
+										},
+										{
+											"wd": "center"
+										},
+										{
+											"wd": "central"
+										},
+										{
+											"wd": "core"
+										},
+										{
+											"wd": "cynosure"
+										},
+										{
+											"wd": "epicenter"
+										},
+										{
+											"wd": "eye"
+										},
+										{
+											"wd": "focus"
+										},
+										{
+											"wd": "ground zero"
+										},
+										{
+											"wd": "heart"
+										},
+										{
+											"wd": "hub"
+										},
+										{
+											"wd": "locus"
+										},
+										{
+											"wd": "mecca"
+										},
+										{
+											"wd": "nerve center"
+										},
+										{
+											"wd": "nexus"
+										},
+										{
+											"wd": "nucleus"
+										},
+										{
+											"wd": "omphalos"
+										},
+										{
+											"wd": "seat"
+										}
+									]
+								],
+								"rel_list": [
+									[
+										{
+											"wd": "headquarters"
+										}
+									],
+									[
+										{
+											"wd": "happy hunting ground"
+										},
+										{
+											"wd": "hive"
+										},
+										{
+											"wd": "hotbed"
+										},
+										{
+											"wd": "hot spot"
+										},
+										{
+											"wd": "playground"
+										},
+										{
+											"wd": "playland"
+										}
+									],
+									[
+										{
+											"wd": "kernel"
+										},
+										{
+											"wd": "nub"
+										},
+										{
+											"wd": "pith"
+										}
+									],
+									[
+										{
+											"wd": "deep"
+										},
+										{
+											"wd": "thick"
+										}
+									],
+									[
+										{
+											"wd": "essence"
+										},
+										{
+											"wd": "quintessence"
+										},
+										{
+											"wd": "soul"
+										}
+									],
+									[
+										{
+											"wd": "attraction"
+										},
+										{
+											"wd": "lodestone",
+											"wvrs": [
+												{
+													"wvl": "also",
+													"wva": "loadstone"
+												}
+											]
+										},
+										{
+											"wd": "magnet"
+										},
+										{
+											"wd": "polestar"
+										}
+									]
+								],
+								"phrase_list": [
+									[
+										{
+											"wd": "where it's at"
+										}
+									]
+								]
+							}
+						]
+					]
+				]
+			}
+		],
+		"shortdef": ["a thing or place that is of greatest importance to an activity or interest"]
+	}
+]

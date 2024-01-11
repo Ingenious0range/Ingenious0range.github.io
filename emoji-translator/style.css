@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --african-violet: #9c89b8ff;
-  --dark-lavender-pink: #f14f9e;
-  --lavender-pink: #f0a6caff;
-  --pink-lavender: #efc3e6ff;
-  --lavender-blush: #f0e6efff;
-  --dark-periwinkle: #7165cc;
-  --periwinkle: #b8beddff;
+	--african-violet: #9c89b8ff;
+	--dark-lavender-pink: #f14f9e;
+	--lavender-pink: #f0a6caff;
+	--pink-lavender: #efc3e6ff;
+	--lavender-blush: #f0e6efff;
+	--dark-periwinkle: #7165cc;
+	--periwinkle: #b8beddff;
 }
 
 img.emoji {
-  height: 1em;
-  width: 1em;
-  margin: 0 0.05em 0 0.1em;
-  vertical-align: -0.1em;
+	height: 1em;
+	width: 1em;
+	margin: 0 0.05em 0 0.1em;
+	vertical-align: -0.1em;
 }
 
 /*
@@ -22,121 +22,129 @@ img.emoji {
 */
 
 body {
-  background-color: var(--african-violet);
-  font-family: "Noto sans", sans-serif;
-  overflow-y: scroll;
+	background-color: var(--african-violet);
+	font-family: "Noto sans", sans-serif;
+	overflow-y: scroll;
 }
 
 header {
-  background-color: var(--african-violet);
-  padding: 2vw;
-  width: 100%;
-  left: 0;
-  top: 0;
-  position: relative;
-  box-sizing: border-box;
+	background-color: var(--african-violet);
+	padding: 2vw;
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: relative;
+	box-sizing: border-box;
 }
 
 header > h1 {
-  font-size: 5vh;
-  padding: 0;
-  margin: 0;
-  color: var(--lavender-blush);
-  text-align: center;
+	font-size: 5vh;
+	padding: 0;
+	margin: 0;
+	color: var(--lavender-blush);
+	text-align: center;
 }
 
 header > h1 > span > img.emoji {
-  height: 1.25em;
-  width: 1.25em;
-  margin: 0 0.05em 0 0.1em;
-  vertical-align: -0.1em;
+	height: 1.25em;
+	width: 1.25em;
+	margin: 0 0.05em 0 0.1em;
+	vertical-align: -0.1em;
 }
 
 header span {
-  color: var(--periwinkle);
-  font-size: 4vh;
+	color: var(--periwinkle);
+	font-size: 4vh;
 }
 
 .main {
-  height: fit-content;
-  min-height: 100%;
-  width: 100%;
-  padding: 2vh;
-  border-top-right-radius: 5vh;
-  border-top-left-radius: 5vh;
-  background-color: var(--lavender-blush);
-  left: 0;
-  position: absolute;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: calc(50% - 1vh) calc(50% - 1vh);
-  column-gap: 2vh;
+	height: fit-content;
+	min-height: 100%;
+	width: 100%;
+	padding: 2vh;
+	border-top-right-radius: 5vh;
+	border-top-left-radius: 5vh;
+	background-color: var(--lavender-blush);
+	left: 0;
+	position: absolute;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: calc(50% - 1vh) calc(50% - 1vh);
+	column-gap: 2vh;
 }
 
 .main > div {
-  background-color: var(--pink-lavender);
-  border-radius: 3vh;
-  padding: 2vh;
-  box-sizing: border-box;
-  text-align: center;
-  height: fit-content;
+	background-color: var(--pink-lavender);
+	border-radius: 3vh;
+	padding: 2vh;
+	box-sizing: border-box;
+	text-align: center;
+	height: fit-content;
 }
 
 .main div > p {
-  font-size: 3vh;
-  font-weight: bold;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 2vh;
-  color: var(--dark-lavender-pink);
+	font-size: 3vh;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 2vh;
+	color: var(--dark-lavender-pink);
 }
 
 .main div > textarea {
-  width: 100%;
-  box-sizing: border-box;
-  height: auto;
-  min-height: 40vh;
-  outline: none;
-  background-color: var(--lavender-blush);
-  border: none;
-  resize: none;
-  border-radius: 1.5vh;
-  padding: 1vh;
-  border: 0.5vh solid var(--pink-lavender);
-  font-size: 2vh;
-  scrollbar-width: thin;
-  scroll-padding: 5px;
-  scrollbar-color: var(--lavender-pink) transparent;
-  font-family: "noto sans", sans-serif;
+	width: 100%;
+	box-sizing: border-box;
+	height: auto;
+	min-height: 40vh;
+	outline: none;
+	background-color: var(--lavender-blush);
+	border: none;
+	resize: none;
+	border-radius: 1.5vh;
+	padding: 1vh;
+	border: 0.5vh solid var(--pink-lavender);
+	font-size: 2vh;
+	scrollbar-width: thin;
+	scroll-padding: 5px;
+	scrollbar-color: var(--lavender-pink) transparent;
+	font-family: "noto sans", sans-serif;
 }
 
 .emojis-output {
-  width: 100%;
-  background-color: var(--lavender-blush);
-  padding: 1vh;
-  margin: 0;
-  z-index: 999;
-  height: auto;
-  border: 0.5vh solid var(--pink-lavender);
-  box-sizing: border-box;
-  border-radius: 1.5vh;
+	width: 100%;
+	background-color: var(--lavender-blush);
+	padding: 1vh;
+	margin: 0;
+	z-index: 999;
+	height: auto;
+	border: 0.5vh solid var(--pink-lavender);
+	box-sizing: border-box;
+	border-radius: 1.5vh;
 }
 
 .emojis-output p {
-  font-size: 2vh;
-  padding: 0;
-  margin: 0;
-  text-align: left;
+	font-size: 2vh;
+	padding: 0;
+	margin: 0;
+	text-align: left;
 }
 
 a {
-  width: 100%;
-  background-color: var(--periwinkle);
-  padding: 1vh 2vh;
-  border-radius: 3vh;
-  cursor: pointer;
-  color: var(--dark-periwinkle);
-  font-weight: bold;
-  font-size: 2vh;
-  box-sizing: border-box;
+	width: 100%;
+	background-color: var(--periwinkle);
+	padding: 1vh 2vh;
+	border-radius: 3vh;
+	cursor: pointer;
+	color: var(--dark-periwinkle);
+	font-weight: bold;
+	font-size: 2vh;
+	box-sizing: border-box;
+}
+
+@media (max-width: 1250px) {
+	.main {
+		grid-template-columns: 100%;
+		grid-template-rows: max-content auto;
+		row-gap: 2vh;
+	}
 }

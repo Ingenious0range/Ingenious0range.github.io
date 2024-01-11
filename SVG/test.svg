@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="40" fill="white" />
+
+  <!-- Create a path for the bumps -->
+  <path id="bumps" fill="none" stroke="black" stroke-width="2">
+    <ellipse cx="50" cy="10" rx="5" ry="3" />
+    <ellipse cx="50" cy="90" rx="5" ry="3" />
+    <ellipse cx="10" cy="50" rx="3" ry="5" />
+    <ellipse cx="90" cy="50" rx="3" ry="5" />
+  </path>
+
+  <!-- Use the path as a clip-path for the circle -->
+  <circle cx="50" cy="50" r="40" fill="url(#bumps)" />
+</svg>
