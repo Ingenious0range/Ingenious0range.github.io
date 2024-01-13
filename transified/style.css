@@ -40,6 +40,8 @@ nav a {
 	border-radius: 3vh;
 	font-size: 3vh;
 	user-select: none;
+	color: var(--white);
+	text-decoration: none;
 }
 
 nav a:hover {
