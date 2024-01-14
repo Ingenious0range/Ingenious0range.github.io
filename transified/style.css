@@ -15,6 +15,10 @@ body {
 	font-family: "noto sans";
 	font-size: 3vh;
 	padding-top: 5vh;
+	background-position: center;
+
+	background-size: contain;
+	background-repeat: repeat-y;
 }
 
 h1 {
@@ -69,6 +73,8 @@ nav a:hover {
 	padding: 2vh;
 	border-radius: 3.5vh;
 	column-gap: 1vh;
+	cursor: auto;
+	transition: 0.3s;
 }
 
 .container > div > img {
@@ -89,7 +95,7 @@ nav a:hover {
 }
 
 .container a {
-	background-color: var(--light-black);
+	background-color: #5bcefa;
 	padding: 1vh;
 	width: 100%;
 	text-align: center;
@@ -99,16 +105,21 @@ nav a:hover {
 	left: 0;
 	box-sizing: border-box;
 	border-radius: 1.5vh;
-	color: var(--white);
+	color: var(--black);
 	font-weight: bold;
 	text-decoration: none;
 	user-select: none;
 	margin-top: 2vh;
+	transition: 0.3s;
+}
+
+.container a:hover {
+	background-color: #f5a9b8;
 }
 
 .search {
 	width: 75%;
-	left: calc(12.5% + 0.5vh + 1px);
+	left: 14.5%;
 	font-size: 2.5vh;
 	position: sticky;
 	top: 5.5vh;
@@ -128,7 +139,7 @@ nav a:hover {
 	border-top-left-radius: 0.5vh;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1401px) {
 	.container {
 		grid-template-columns: auto;
 	}
