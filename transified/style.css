@@ -143,7 +143,7 @@ nav a:hover {
 	.container {
 		grid-template-columns: auto;
 width: 75%;
-left: 12.5%;
+left: 0;
 	}
 
 	.container > div {
