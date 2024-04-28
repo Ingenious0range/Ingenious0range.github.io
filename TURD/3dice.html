@@ -17,11 +17,27 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
         rel="stylesheet">
-
+    <style>
+        .graph-container {
+	background-color: var(--russian-violet);
+	width: 100%;
+	height: 50vh;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+	grid-template-rows: 90% auto;
+	grid-column-gap: 0.5vh;
+	padding: 0.5vh 0.5vw;
+	box-sizing: border-box;
+	border-radius: 2vw;
+	font-family: "Roboto", sans-serif;
+	align-items: end;
+	min-height: 50vh;
+}
+    </style>
     <script>
 
-        const numbers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-        const probability = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        const numbers = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        const probability = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         let stopVar = 0;
 
         function stopFunction() {
@@ -35,14 +51,14 @@
 
             while (i < 1000) {
                 i = i + 1;
-                num = (Math.floor(Math.random() * 6 + 1)) + (Math.floor(Math.random() * 6 + 1));
+                num = (Math.floor(Math.random() * 6 + 1)) + (Math.floor(Math.random() * 6 + 1) + (Math.floor(Math.random() * 6 + 1)));
 
                 numbers[num]++;
 
                 document.getElementById(num + "Num").innerHTML = numbers[num];
             }
 
-            for (let i = 2; i < numbers.length; i++) {
+            for (let i = 3; i < numbers.length; i++) {
                 total += numbers[i];
             }
 
@@ -50,7 +66,7 @@
 
             maxSoFar = 0
 
-            for (let i = 2; i < probability.length; i++) {
+            for (let i = 3; i < probability.length; i++) {
                 probNum = (numbers[i] / total) * 100;
 
                 probability[i] = probNum.toFixed(2);
@@ -66,7 +82,7 @@
                 scale = maxSoFar / 100 * 18;
             }
 
-            for (let i = 2; i < probability.length; i++) {
+            for (let i = 3; i < probability.length; i++) {
                 document.getElementById(i + "Prob").innerHTML = probability[i] + "%";
                 document.getElementById(i + "Bar").innerHTML = probability[i] + "%";
                 document.getElementById(i + "Bar").style.height = probability[i] * scale + "%";            
@@ -105,8 +121,8 @@
         <a class="button" onclick="thingy()">Roll Dice</a>
         <a class="button" style="margin-top: 5.5vw;"
             onclick="stopFunction()">Stop Dice Rolling</a>
-        <a class="button" style="margin-top: 11vw;" href="/TURD/3dice.html">Try
-            with 3 Dice</a>
+        <a class="button" style="margin-top: 11vw;" href="/TURD/index.html">Try
+            with 2 Dice</a>
 
     </div>
     <div class="right-side">
@@ -115,11 +131,6 @@
                 <th>#</th>
                 <th>Times Rolled</th>
                 <th>Probability</th>
-            </tr>
-            <tr>
-                <th>2</th>
-                <th id="2Num">0</th>
-                <th id="2Prob">0%</th>
             </tr>
             <tr>
                 <th>3</th>
@@ -172,14 +183,44 @@
                 <th id="12Prob">0%</th>
             </tr>
             <tr>
+                <th>13</th>
+                <th id="13Num">0</th>
+                <th id="13Prob">0%</th>
+            </tr>
+            <tr>
+                <th>14</th>
+                <th id="14Num">0</th>
+                <th id="14Prob">0%</th>
+            </tr>
+            <tr>
+                <th>15</th>
+                <th id="15Num">0</th>
+                <th id="15Prob">0%</th>
+            </tr>
+            <tr>
+                <th>16</th>
+                <th id="16Num">0</th>
+                <th id="16Prob">0%</th>
+            </tr>
+            <tr>
+                <th>17</th>
+                <th id="17Num">0</th>
+                <th id="17Prob">0%</th>
+            </tr>
+            <tr>
+                <th>18</th>
+                <th id="18Num">0</th>
+                <th id="18Prob">0%</th>
+            </tr>
+            <tr>
                 <th>Total</th>
                 <th id="totalNum">0</th>
                 <th id="totalProb">100%</th>
             </tr>
+
         </table>
 
         <div class="graph-container" id="cont">
-            <div class="bar" id="2Bar">0%</div>
             <div class="bar" id="3Bar">0%</div>
             <div class="bar" id="4Bar">0%</div>
             <div class="bar" id="5Bar">0%</div>
@@ -190,7 +231,12 @@
             <div class="bar" id="10Bar">0%</div>
             <div class="bar" id="11Bar">0%</div>
             <div class="bar" id="12Bar">0%</div>
-            <p>2</p>
+            <div class="bar" id="13Bar">0%</div>
+            <div class="bar" id="14Bar">0%</div>
+            <div class="bar" id="15Bar">0%</div>
+            <div class="bar" id="16Bar">0%</div>
+            <div class="bar" id="17Bar">0%</div>
+            <div class="bar" id="18Bar">0%</div>
             <p>3</p>
             <p>4</p>
             <p>5</p>
@@ -201,6 +247,12 @@
             <p>10</p>
             <p>11</p>
             <p>12</p>
+            <p>13</p>
+            <p>14</p>
+            <p>15</p>
+            <p>16</p>
+            <p>17</p>
+            <p>18</p>
         </div>
     </div>
 </body>
