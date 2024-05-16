@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <script src="https://kit.fontawesome.com/63cb2e29a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/transified/style.css">
+    <script src="https://kit.fontawesome.com/63cb2e29a5.js" crossorigin="anonymous"></script>
+    <script src="/transified/index.js"></script>
+
+    <!-- Primary Meta Tags -->
+    <title>radiocarbon dating sim</title>
+    <meta name="title" content="ingenious0rang3.dev" />
+    <meta name="description" content="im just a weirdo who likes doing some web development :333" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ingenious0rang3.dev" />
+    <meta property="og:title" content="ingenious0rang3.dev" />
+    <meta property="og:description" content="im just a weirdo who likes doing some web development :333" />
+    <meta property="og:image" content="/SVG/metaTag.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ingenious0rang3.dev" />
+    <meta property="twitter:title" content="ingenious0rang3.dev" />
+    <meta property="twitter:description" content="im just a weirdo who likes doing some web development :333" />
+    <meta property="twitter:image" content="/SVG/metaTag.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+        :root {
+            --black: #000000;
+            --dark-grey: #0c0c0c;
+            --light-black: #131313;
+            --less-dark-grey: #1a1a1a;
+            --white: #ffffff;
+            --light-grey: #e7e7e7;
+        }
+
+        body {
+            background-color: var(--light-black);
+            color: var(--white);
+            font-family: "noto sans";
+            font-size: 3vh;
+            padding-top: 5vh;
+            background-position: center;
+            background-size: contain;
+            background-repeat: repeat-y;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav {
+            background-color: var(--dark-grey);
+            left: 0;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.5vh 1vh;
+            z-index: 999;
+        }
+
+        nav a {
+            cursor: pointer;
+            padding: 0.1vh 1.5vh;
+            border-radius: 3vh;
+            font-size: 3vh;
+            user-select: none;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: var(--less-dark-grey);
+        }
+
+        .container {
+            width: 90%;
+            left: 5%;
+            position: relative;
+            display: grid;
+            grid-template-columns: 33% 67%;
+            column-gap: .33vh;
+            min-height: 75vh;
+        }
+
+        .container>div {
+            background-color: #202020;
+            border-radius: .5vh;
+            padding: 2vh;
+        }
+
+        .container>div:first-of-type {
+            border-top-left-radius: 3vh;
+            border-bottom-left-radius: 3vh;
+        }
+
+        .container>div:last-of-type {
+            border-top-right-radius: 3vh;
+            border-bottom-right-radius: 3vh;
+        }
+
+        .container>div p {
+            font-size: 2.5vh;
+            font-weight: bold;
+            padding: 0;
+            margin: 0;
+            user-select: none;
+
+        }
+
+        .slidecontainer {
+            width: 100%;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 1vh;
+            border-radius: 5px;
+            background: #f1f1f1;
+            outline: none;
+            opacity: 1;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            cursor: pointer;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #f56fa1;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            transition: .3s
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #f56fa1;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: .3s
+        }
+
+        .c14 {
+            background-color: #f56fa1;
+            padding: 1vh;
+            border-radius: 3vh;
+            width: fit-content;
+            font-size: 2vh;
+            user-select: none;
+            position: absolute;
+            animation: wiggle .2s ease-in-out infinite;
+        }
+
+        .c14 sup {
+            font-size 1vh font-weight: bold;
+        }
+
+        @keyframes wiggle {
+            from {
+                transform: translate(0px, 0px);
+            }
+
+            20% {
+                transform: translate(1px, 0px)
+            }
+
+            40% {
+                transform: translate(1px, 1px);
+            }
+
+            60% {
+                transform: translate(-1px 0px)
+            }
+
+            80% {
+                transform: translate(0px, 1px);
+            }
+        }
+
+        .btn {
+            padding: 1vh 2vh;
+            background-color: #f56fa1;
+            border-radius: 3vh;
+            color: white;
+            font-size: 2.5vh;
+            cursor: pointer;
+            font-weight: bold;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/"><i class="fa-solid fa-house"></i> home</a>
+    </nav>
+    <h1 id="simHeader">radiocarbon dating simulation</h1>
+    <br>
+    <div class="container">
+        <div>
+            <h2 style="margin: 0; padding: 0; text-align: center;">
+                inputs
+            </h2>
+            <p style="font-size: 3vh;">
+                years ago: <span id="year-value" style="font-weight: normal;"></span>
+            </p>
+            <div class="slidecontainer">
+                <input type="range" min="500" max="60000" value="50" class="slider" step="10" id="year-slider">
+                <p style="width: 100%; font-size: 2.5vh;">
+                    <span style="text-align: left; margin-left: .5vh">500</span>
+                    <span style="float: right;">60,000</span>
+                </p>
+            </div>
+            <br>
+            <p style="font-size: 3vh;">
+                half lives passed: <span id="life-value" style="font-weight: normal;"></span>
+            </p>
+            <div class="slidecontainer">
+                <input type="range" min=".090" max="10.47" value=".090" class="slider" step=".001" id="life-slider">
+                <p style="width: 100%; font-size: 2.5vh;">
+                    <span style="text-align: left; margin-left: .5vh">0.09</span>
+                    <span style="float: right;">10.47</span>
+                </p>
+            </div>
+
+            <br>
+            <p style="font-size: 3vh;">
+                initial concentration: <span id="conc-value" style="font-weight: normal;">500 atoms</span>
+            </p>
+            <div class="slidecontainer">
+                <input type="range" min="50" max="1000" value="500" class="slider" step="10" id="conc-slider">
+                <p style="width: 100%; font-size: 2.5vh;">
+                    <span style="text-align: left; margin-left: .5vh">50 atoms</span>
+                    <span style="float: right;">1000 atoms</span>
+                </p>
+            </div>
+            <br>
+            <a class="btn" onclick="reset()">reset</a>
+            <br>
+            <br>
+            <p style="font-size: 2vh; font-weight: normal;">
+                <sup>14</sup>C is very uncommon and is only around 1 out of 10<sup>12</sup> atoms of carbon. this is not to scale
+            </p>
+        </div>
+        <div style="position: relative; padding: 2vh">
+            <p style="font-size: 2.5vh; text-align: center; z-index: 999;" class="urmom">
+                percent of <sup>14</sup>C left: <span id="simInfo" style="font-weight: normal;"></span>
+            </p>
+            <div id="simCont">
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var yearSlider = document.getElementById("year-slider");
+        var yearSpan = document.getElementById("year-value");
+        yearSpan.innerHTML = yearSlider.value;
+        var lifeSlider = document.getElementById("life-slider");
+        var lifeSpan = document.getElementById("life-value");
+        lifeSpan.innerHTML = lifeSlider.value;
+        var concSlider = document.getElementById("conc-slider");
+        var concSpan = document.getElementById("conc-value");
+        concSpan.innerHTML = concSlider.value + " atoms";
+
+        yearSlider.oninput = function() {
+            yearSpan.innerHTML = this.value;
+            halfLife = this.value / 5730;
+            lifeSlider.value = halfLife;
+            lifeSpan.innerHTML = lifeSlider.value;
+            var num = Math.ceil(concSlider.value * (1 / 2) ** halfLife);
+            const container = document.getElementById('simCont');
+            removeAllChildNodes(container);
+            const elements = createRandomDivs(num);
+            elements.forEach(element => document.getElementById("simCont").appendChild(element));
+        }
+
+        lifeSlider.oninput = function() {
+            lifeSpan.innerHTML = this.value;
+            yearValue = this.value * 5730;
+            yearSlider.value = yearValue;
+            yearSpan.innerHTML = yearSlider.value;
+            var num = Math.ceil(concSlider.value * (1 / 2) ** this.value);
+            const container = document.getElementById('simCont');
+            removeAllChildNodes(container);
+            const elements = createRandomDivs(num);
+            elements.forEach(element => document.getElementById("simCont").appendChild(element));
+        }
+
+        concSlider.oninput = function() {
+            concSpan.innerHTML = this.value + " atoms";
+
+            var num = Math.ceil(this.value * (1 / 2) ** lifeSlider.value);
+            const container = document.getElementById('simCont');
+
+            removeAllChildNodes(container);
+            const elements = createRandomDivs(num);
+            elements.forEach(element => document.getElementById("simCont").appendChild(element));
+        }
+
+        function percentC14Remaining(timeInYears) {
+            const halfLife = 5730; // Half-life of C14 in years
+            return 100 ** (-timeInYears / halfLife);
+        }
+
+        function createRandomDivs(n) {
+			document.getElementById("simInfo").innerText = "~" + Math.round((n / concSlider.value) * 100) + "%";
+            const elements = [];
+
+            for (let i = 0; i < n; i++) {
+                const top = (Math.random() * 80) + 10;
+                const left = (Math.random() * 90) + 3;
+                const element = document.createElement("div");
+                element.classList.add("c14");
+                element.innerHTML = "<sup>14</sup>C";
+                element.style.top = `${top}%`;
+                element.style.left = `${left}%`;
+                elements.push(element);
+                const animationOffset = Math.random() * -.2;
+                element.style.animationPlayState = "running";
+
+                element.style.animationDelay = `${animationOffset}s`;
+            }
+
+            return elements;
+        }
+
+
+        function removeAllChildNodes(parent) {
+            while (parent.lastChild) {
+                parent.removeChild(parent.lastChild);
+
+            }
+        }
+
+        function reset() {
+            lifeSlider.value = .09;
+            lifeSpan.innerText = lifeSlider.value;
+            yearSlider.value = 500;
+            yearSpan.innerText = yearSlider.value;
+            concSlider.value = 500;
+            concSpan.innerText = concSlider.value + " atoms";
+            var num = Math.round(500 * (1 / 2) ** 0.09);
+            const container = document.getElementById('simCont');
+            removeAllChildNodes(container);
+            const elements = createRandomDivs(num);
+            elements.forEach(element => document.getElementById("simCont").appendChild(element));
+        }
+
+
+        const elements = createRandomDivs(Math.round(500 * (1 / 2) ** .09));
+        elements.forEach(element => document.getElementById("simCont").appendChild(element));
+    </script>
+</body>
+
+</html>
