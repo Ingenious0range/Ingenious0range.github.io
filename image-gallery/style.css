@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+	--black: #000000;
+	--dark-grey: #0c0c0c;
+	--light-black: #131313;
+	--less-dark-grey: #1a1a1a;
+	--white: #ffffff;
+	--light-grey: #e7e7e7;
+}
+
+nav {
+	background-color: var(--dark-grey);
+	left: 0;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0.5vh 1vh;
+	z-index: 999;
+	text-align: left;
+}
+
+nav a {
+	cursor: pointer;
+	padding: 0.1vh 1.5vh;
+	border-radius: 3vh;
+	font-size: 3vh;
+	user-select: none;
+	color: var(--white);
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: var(--less-dark-grey);
+}
+
+body {
+	background-color: var(--black);
+	color: var(--white);
+	text-align: center;
+}

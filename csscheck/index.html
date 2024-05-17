@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet" />
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180"
+            href="./favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="./favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16"
+            href="./favicon/favicon-16x16.png">
+        <link rel="manifest" href="./favicon/site.webmanifest">
+        <script src="https://kit.fontawesome.com/63cb2e29a5.js"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/csscheck/style.css">
+        <script src="https://kit.fontawesome.com/63cb2e29a5.js"
+            crossorigin="anonymous"></script>
+        <script src="/csscheck/index.html"></script>
+
+        <!-- Primary Meta Tags -->
+        <title>css compatibility checker</title>
+        <meta name="title" content="ingenious0rang3.dev" />
+        <meta name="description"
+            content="im just a weirdo who likes doing some web development :333" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ingenious0rang3.dev" />
+        <meta property="og:title" content="ingenious0rang3.dev" />
+        <meta property="og:description"
+            content="im just a weirdo who likes doing some web development :333" />
+        <meta property="og:image" content="/SVG/metaTag.png" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://ingenious0rang3.dev" />
+        <meta property="twitter:title" content="ingenious0rang3.dev" />
+        <meta property="twitter:description"
+            content="im just a weirdo who likes doing some web development :333" />
+        <meta property="twitter:image" content="/SVG/metaTag.png" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--https://www.tldraw.com/s/v2_c_J7IFCRbIthOorCJgW2WDE?viewport=-7%2C14%2C1920%2C965&page=page%3Apage-->
+    </head>
+    <nav>
+        <a href="/"><i class="fa-solid fa-house"></i> home</a>
+    </nav>
+    <body onload="addData('currently', 'y');">
+        <h1>css compatibility checker</h1>
+
+        <div class="container">
+            <div class="basic-grid">
+                <input type="text" class="searchbar"
+                    placeholder="search for css property">
+                <a class="search-submit">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </a>
+            </div>
+
+            <div class="css-property">
+                <h1 style="text-align: left; margin-left: 2vh;">property
+                    name</h1>
+                <table>
+                    <tr>
+                        <th> </th>
+                        <th>Chrome</th>
+                        <th>Firefox</th>
+                        <th>Edge</th>
+                        <th>Safari</th>
+                        <th>Opera</th>
+                        <th>IE</th>
+                    </tr>
+                    <tr id="currently">
+                        <td>currently compatible</td>
+                        <!--items are added with js-->
+                    </tr>
+                    <tr id="lowest">
+                        <td>lowest compatible version</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr id="incompatible">
+                        <td>incompatible versions</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </body>
+</html>

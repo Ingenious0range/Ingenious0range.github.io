@@ -1,25 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --cherry-blossom-pink: #f5a9b8ff;
-  --cherry-blossom-pink-2: #f7b2c0ff;
-  --pink: #f8bbc8ff;
-  --fairy-tale: #faccd7ff;
-  --lavender-blush: #ffeff6ff;
-  --snow: #fff7fbff;
-  --white: #ffffffff;
-  --alice-blue: #f4fcffff;
-  --alice-blue-2: #c0eafe;
-  --uranian-blue: #a3e0fdff;
-  --vivid-sky-blue: #5bcefaff;
-  --darker-uranian-blue: rgb(23, 33, 37);
-  --black: #000000ff;
-  --night: #101010ff;
-  --eerie-black: #1f1f1fff;
-  --antiflash-white: rgb(207, 207, 207);
-  --antiflash-white-2: rgb(255, 255, 255);
-  --violet-web-color: rgb(255, 187, 253);
-  --ultra-pink: #ff6ffaff;
+	--cherry-blossom-pink: #f5a9b8ff;
+	--cherry-blossom-pink-2: #f7b2c0ff;
+	--pink: #f8bbc8ff;
+	--fairy-tale: #faccd7ff;
+	--lavender-blush: #ffeff6ff;
+	--snow: #fff7fbff;
+	--white: #ffffffff;
+	--alice-blue: #f4fcffff;
+	--alice-blue-2: #c0eafe;
+	--uranian-blue: #a3e0fdff;
+	--vivid-sky-blue: #5bcefaff;
+	--darker-uranian-blue: rgb(23, 33, 37);
+	--black: #000000ff;
+	--night: #101010ff;
+	--eerie-black: #1f1f1fff;
+	--antiflash-white: rgb(207, 207, 207);
+	--antiflash-white-2: rgb(255, 255, 255);
+	--violet-web-color: rgb(255, 187, 253);
+	--ultra-pink: #ff6ffaff;
 }
 
 /*
@@ -27,389 +27,396 @@ https://coolors.co/f5a9b8-faccd7-ffeff6-fff7fb-ffffff-f4fcff-ddf4ff-c0eafe-a3e0f
 */
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--white);
-  font-family: "Lato", sans-serif;
-  height: 200vh;
-  overflow-x: hidden;
+	background-color: var(--white);
+	font-family: "Lato", sans-serif;
+	height: 200vh;
+	overflow-x: hidden;
 }
 
 .landingHeader {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background-color: var(--lavender-blush);
-  padding: 3vw;
-  background-image: url("/SVG/landing.svg");
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+	background-color: var(--lavender-blush);
+	padding: 3vw;
+	background-image: url("/SVG/landing.svg");
+	background-position: bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
 }
 
 .landingHeader p:first-child {
-  font-size: 10vh;
-  font-weight: 900;
-  color: var(--vivid-sky-blue);
+	font-size: 10vh;
+	font-weight: 900;
+	color: var(--vivid-sky-blue);
 }
 
 .landingHeader p {
-  font-size: 5vh;
-  font-weight: 700;
-  color: var(--uranian-blue);
-  margin: 0;
-  padding: 0;
+	font-size: 5vh;
+	font-weight: 700;
+	color: var(--uranian-blue);
+	margin: 0;
+	padding: 0;
 }
 
-.landingHeader a {
-  font-size: 3vh;
-  background-color: transparent;
-  color: var(--vivid-sky-blue);
-  width: 3vh;
-  height: 3vh;
-  bottom: 3vw;
-  padding: 0.5vw;
-  position: absolute;
-  border-radius: 100%;
-  text-align: center;
-  left: calc(50vw - 2.5vh);
-  transition: 0.3s;
-  vertical-align: center;
-  box-sizing: content-box;
+.scroll {
+	font-size: 3vh;
+	background-color: transparent;
+	color: var(--vivid-sky-blue);
+	width: 3vh;
+	height: 3vh;
+	bottom: 3vw;
+	padding: 0.5vw;
+	position: absolute;
+	border-radius: 100%;
+	text-align: center;
+	left: calc(50vw - 2.5vh);
+	transition: 0.3s;
+	vertical-align: center;
+	box-sizing: content-box;
 }
 
 .landingHeader a:hover {
-  background-color: var(--lavender-blush);
+	background-color: var(--lavender-blush);
 }
 
 /*yes i know i'm not starting from 0 with the counting. and no, i don't care*/
 
 .block2 {
-  background-color: var(--alice-blue);
-  background-image: url("/SVG/block2.svg");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 3vw;
-  left: 0;
-  top: 100%;
-  position: absolute;
-  display: grid;
-  grid-template-columns: 50% auto;
-  text-align: right;
+	background-color: var(--alice-blue);
+	background-image: url("/SVG/block2.svg");
+	background-position: top;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 3vw;
+	left: 0;
+	top: 100%;
+	position: absolute;
+	display: grid;
+	grid-template-columns: 50% auto;
+	text-align: right;
 }
 .block2 a {
-  font-size: 4vh;
-  color: var(--vivid-sky-blue);
-  text-decoration: none;
-  cursor: pointer;
+	font-size: 4vh;
+	color: var(--vivid-sky-blue);
+	text-decoration: none;
+	cursor: pointer;
+	user-select: none;
 }
 
 .block2 p {
-  font-size: 10vh;
-  font-weight: 900;
-  color: var(--vivid-sky-blue);
-  text-align: inherit;
-  max-width: 100%;
-  right: 3vw;
-  position: relative;
-  line-height: 60%;
+	font-size: 10vh;
+	font-weight: 900;
+	color: var(--vivid-sky-blue);
+	text-align: inherit;
+	max-width: 100%;
+	right: 3vw;
+	position: relative;
+	line-height: 60%;
 }
 
 .block2 p span {
-  font-size: 5vh;
-  color: var(--uranian-blue);
-  line-height: 8%;
+	font-size: 5vh;
+	color: var(--uranian-blue);
+	line-height: 8%;
 }
 
 .block2 img {
-  width: 20vw;
-  height: 20vw;
-  top: calc(50% - 10vw);
-  position: relative;
-  left: calc(50% - 10vw);
+	width: 20vw;
+	height: 20vw;
+	top: calc(50% - 10vw);
+	position: relative;
+	left: calc(50% - 10vw);
 }
 
 .block3 {
-  background-color: var(--alice-blue);
-  background-image: url("/SVG/block3.svg");
-  background-position: top;
-  background-size: contain;
-  background-repeat: repeat-y;
-  height: max-content;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 3vw;
-  left: 0;
-  top: 200%;
-  position: absolute;
+	background-color: var(--alice-blue);
+	background-image: url("/SVG/block3.svg");
+	background-position: top;
+	background-size: contain;
+	background-repeat: repeat-y;
+	height: max-content;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 3vw;
+	left: 0;
+	top: 200%;
+	position: absolute;
 }
 
 .block3 p {
-  font-size: 10vh;
-  font-weight: 900;
-  color: var(--cherry-blossom-pink);
-  text-align: right;
-  width: 100%;
-  right: 3vw;
-  position: relative;
+	font-size: 10vh;
+	font-weight: 900;
+	color: var(--cherry-blossom-pink);
+	text-align: right;
+	width: 100%;
+	right: 3vw;
+	position: relative;
 }
 
 .block3 p span {
-  font-size: 5vh;
-  color: var(--cherry-blossom-pink-2);
+	font-size: 5vh;
+	color: var(--cherry-blossom-pink-2);
 }
 
 .project-grid {
-  width: 90%;
-  padding: 1vw;
-  left: 5%;
-  position: relative;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: calc(50% - 1vw) calc(50% - 1vw);
-  grid-gap: 2vw;
-  padding: 0;
+	width: 90%;
+	padding: 2vh;
+	left: 5%;
+	position: relative;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: calc(50% - 1vw) calc(50% - 1vw);
+	grid-gap: 3vh;
+	padding: 0;
+	user-select: none;
 }
 
 .project-grid div {
-  width: auto;
-  background-color: var(--pink);
-  border-radius: 2vw;
-  padding: 1vw;
-  display: grid;
-  grid-template-columns: 40% auto;
+	width: auto;
+	background-color: var(--pink);
+	border-radius: 4vh;
+	padding: 2vh;
+	display: grid;
+	grid-template-columns: 40% auto;
 }
 
 .project-grid div > img {
-  width: 100%;
-  border-radius: 1vw;
+	width: 100%;
+	border-radius: 2vh;
 }
 
 .project-grid div > div {
-  display: grid;
-  grid-template-rows: max-content auto max-content;
-  grid-template-columns: auto;
-  padding: 0;
-  padding-left: 1vw;
-  grid-row-gap: 0.5vw;
+	display: grid;
+	grid-template-rows: max-content auto max-content;
+	grid-template-columns: auto;
+	padding: 0;
+	padding-left: 2vh;
+	grid-row-gap: 0.5vw;
 }
 
 header {
-  color: var(--vivid-sky-blue);
-  font-weight: bold;
-  font-family: "lato", sans-serif;
-  font-size: 4vh;
-  margin: 0;
-  padding: 0;
-  line-height: 80%;
+	color: var(--vivid-sky-blue);
+	font-weight: bold;
+	font-family: "lato", sans-serif;
+	font-size: 4vh;
+	margin: 0;
+	padding: 0;
+	line-height: 80%;
 }
 
 header > span {
-  font-size: 2.5vh;
-  color: var(--alice-blue-2);
-  line-height: 10%;
+	font-size: 2.5vh;
+	color: var(--alice-blue-2);
+	line-height: 10%;
 }
 
 header > span > i {
-  color: var(--uranian-blue);
+	color: var(--uranian-blue);
 }
 
 description {
-  color: var(--snow);
-  text-overflow: ellipsis;
-  font-size: 2vh;
+	color: var(--snow);
+	text-overflow: ellipsis;
+	font-size: 2vh;
 }
 
 .project-grid div > div > a {
-  background-color: var(--lavender-blush);
-  padding: 0.5vw;
-  border-radius: 1vw;
-  color: var(--cherry-blossom-pink);
-  font-weight: bold;
-  text-align: center;
-  cursor: pointer;
-  font-size: 2vh;
-  text-decoration: none;
+	background-color: var(--lavender-blush);
+	padding: 0.5vw;
+	border-radius: 3vh;
+	color: var(--cherry-blossom-pink);
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+	font-size: 2vh;
+	text-decoration: none;
 }
 
 .project-grid div > div > a:hover,
 .project-grid div > div > a > i:hover {
-  background-color: var(--cherry-blossom-pink);
-  color: var(--lavender-blush);
+	background-color: var(--cherry-blossom-pink);
+	color: var(--lavender-blush);
 }
 
 @media (max-width: 1250px) {
-  .project-grid,
-  .project-grid > div,
-  .project-grid div > div {
-    grid-template-columns: 100%;
-    padding: 1vw;
-  }
-  .block2 {
-    grid-template-columns: 100%;
-    text-align: center;
-    padding: 0;
-    grid-template-rows: max-content auto;
-    padding-top: 3vw;
-    grid-row-gap: 3vw;
-  }
-  .block2 img {
-    width: 50vw;
-    height: 50vw;
-    left: 25%;
-    box-sizing: border-box;
-    position: relative;
-  }
+	.project-grid,
+	.project-grid > div,
+	.project-grid div > div {
+		grid-template-columns: 100%;
+		padding: 1vw;
+	}
 
-  .block2 p {
-    position: none;
-    right: 0;
-    width: 100%;
-    font-size: 6vh;
-    line-height: normal;
-  }
+	.project-grid > div {
+		padding: 1vh;
+		border-radius: 3vh;
+	}
+	.block2 {
+		grid-template-columns: 100%;
+		text-align: center;
+		padding: 0;
+		grid-template-rows: max-content auto;
+		padding-top: 3vw;
+		grid-row-gap: 3vw;
+	}
+	.block2 img {
+		width: 50vw;
+		height: 50vw;
+		left: 25%;
+		box-sizing: border-box;
+		position: relative;
+	}
 
-  .block2 p span {
-    font-size: 4vh;
-    line-height: 80%;
-    padding: 0;
-    margin: 0;
-  }
+	.block2 p {
+		position: none;
+		right: 0;
+		width: 100%;
+		font-size: 6vh;
+		line-height: normal;
+	}
+
+	.block2 p span {
+		font-size: 4vh;
+		line-height: 80%;
+		padding: 0;
+		margin: 0;
+	}
 }
 
 .sidebar {
-  background-color: var(--night);
-  height: 100%;
-  width: 25vw;
-  color: var(--antiflash-white);
-  left: 0;
-  top: 0;
-  position: fixed;
-  box-sizing: border-box;
-  padding: 3vw;
-  margin-bottom: 0;
-  overflow-x: hidden;
+	background-color: var(--night);
+	height: 100%;
+	width: 25vw;
+	color: var(--antiflash-white);
+	left: 0;
+	top: 0;
+	position: fixed;
+	box-sizing: border-box;
+	padding: 3vw;
+	margin-bottom: 0;
+	overflow-x: hidden;
 }
 
 .sidebar p {
-  color: var(--violet-web-color);
-  font-size: 7vh;
-  font-weight: bold;
-  text-overflow: ellipsis;
-  width: 100%;
+	color: var(--violet-web-color);
+	font-size: 7vh;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	width: 100%;
 }
 
 .sidebar p > span {
-  color: var(--ultra-pink);
-  margin-bottom: 0;
+	color: var(--ultra-pink);
+	margin-bottom: 0;
 }
 
 .progress-bar {
-  width: 100%;
-  background-color: var(--eerie-black);
-  height: auto;
-  border-radius: 3vh;
-  margin-top: 0;
-  padding: 0.5vh;
+	width: 100%;
+	background-color: var(--eerie-black);
+	height: auto;
+	border-radius: 3vh;
+	margin-top: 0;
+	padding: 0.5vh;
 }
 
 .progress-bar div {
-  width: 5%;
-  background-color: var(--ultra-pink);
-  border-radius: 3vh;
-  height: 3vh;
-  min-width: 3vh;
-  transition: 0.5s;
+	width: 5%;
+	background-color: var(--ultra-pink);
+	border-radius: 3vh;
+	height: 3vh;
+	min-width: 3vh;
+	transition: 0.5s;
 }
 
 .question-panel {
-  width: 70%;
-  height: 100vh;
-  background-color: var(--eerie-black);
-  height: auto;
-  padding: 3vw;
-  border-top-left-radius: 2vw;
-  border-bottom-left-radius: 2vw;
-  box-sizing: border-box;
-  top: 0;
-  left: 30vw;
-  position: absolute;
-  color: var(--antiflash-white);
+	width: 70%;
+	height: 100vh;
+	background-color: var(--eerie-black);
+	height: auto;
+	padding: 3vw;
+	border-top-left-radius: 2vw;
+	border-bottom-left-radius: 2vw;
+	box-sizing: border-box;
+	top: 0;
+	left: 30vw;
+	position: absolute;
+	color: var(--antiflash-white);
 }
 
 .question-panel p {
-  color: var(--antiflash-white-2);
-  font-size: 3vh;
-  font-weight: bold;
+	color: var(--antiflash-white-2);
+	font-size: 3vh;
+	font-weight: bold;
 }
 
 .container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 2vh;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 2vh;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
 }
 
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: var(--night);
-  border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: var(--night);
+	border-radius: 50%;
 }
 
 .container:hover input ~ .checkmark {
-  background-color: none;
+	background-color: none;
 }
 
 .checkmark:after {
-  content: "";
-  position: absolute;
-  display: block;
-  background-color: var(--ultra-pink);
+	content: "";
+	position: absolute;
+	display: block;
+	background-color: var(--ultra-pink);
 }
 
 .container input:checked ~ .checkmark {
-  background-color: var(--ultra-pink);
+	background-color: var(--ultra-pink);
 }
 
 .checkmark:after {
-  background-color: var(--ultra-pink);
+	background-color: var(--ultra-pink);
 }
 
 .container input:checked ~ .checkmark:after {
-  display: block;
-  background-color: var(--eerie-black);
+	display: block;
+	background-color: var(--eerie-black);
 }
 
 .container .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--night);
+	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--night);
 }

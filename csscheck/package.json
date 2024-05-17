@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@mdn/browser-compat-data": "^5.5.23"
+  }
+}

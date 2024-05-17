@@ -1,0 +1,11 @@
+{
+	"dependencies": {
+		"@mdn/browser-compat-data": "^5.5.23"
+	},
+	"devDependencies": {
+		"parcel-bundler": "^1.12.5"
+	},
+	"scripts": {
+		"build": "parcel build index.js --out-dir dist"
+	}
+}

@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+	--black: #000000;
+	--dark-grey: #0c0c0c;
+	--light-black: #131313;
+	--less-dark-grey: #1a1a1a;
+	--white: #ffffff;
+	--light-grey: #e7e7e7;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+nav {
+	background-color: var(--dark-grey);
+	left: 0;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0.5vh 1vh;
+	z-index: 999;
+	text-align: left;
+}
+
+nav a {
+	cursor: pointer;
+	padding: 0.1vh 1.5vh;
+	border-radius: 3vh;
+	font-size: 3vh;
+	user-select: none;
+	color: var(--white);
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: var(--less-dark-grey);
+}
+
+body {
+	background-color: var(--black);
+	color: var(--white);
+	text-align: center;
+	width: 100vw;
+	left: 0;
+	position: absolute;
+	overflow-x: hidden;
+	font-family: "lato";
+	margin-top: 5vh;
+}
+
+.container {
+	width: 60%;
+	left: 20%;
+	position: relative;
+	background-color: var(--light-black);
+	padding: 2vh;
+	border-radius: 3.5vh;
+	box-sizing: border-box;
+}
+
+.searchbar {
+	width: 100%;
+	font-size: 2.5vh;
+	padding: 0.5vh 2vh;
+	border-radius: 3vh;
+	border: none;
+	outline: none;
+	background-color: var(--dark-grey);
+	color: var(--white);
+	border-top-right-radius: 0.5vh;
+	border-bottom-right-radius: 0.5vh;
+}
+
+.search-submit {
+	width: max-content;
+	background-color: var(--dark-grey);
+	padding: 0.5vh 1.5vh 0.5vh 1vh;
+	border-radius: 3vh;
+	border-top-left-radius: 0.5vh;
+	border-bottom-left-radius: 0.5vh;
+	cursor: pointer;
+	user-select: none;
+}
+
+.search-submit span {
+	transform: translateY(0.25vh);
+}
+
+.basic-grid {
+	display: grid;
+	grid-template-columns: auto max-content;
+	column-gap: 0.33vh;
+}
+
+table {
+	background-color: var(--dark-grey);
+	width: 100%;
+	border-collapse: collapse;
+	border-top-left-radius: 2vh;
+	border-top-right-radius: 2vh;
+	user-select: none;
+}
+
+tr:nth-child(even) {
+	background-color: #1a1a1a7e;
+}
+
+td,
+th {
+	padding: 1vh;
+}
+
+th {
+	font-size: 2vh;
+}
+
+table span {
+	transform: translateY(0.25vh);
+	user-select: none;
+}
+
+.green {
+	color: green;
+}
+
+.red {
+	color: red;
+}
+
+@media (max-width: 1250px) {
+	.container {
+		width: 90%;
+		left: 5%;
+	}
+}
