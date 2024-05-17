@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<head>
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="stylesheet" href="./LOSER/style.css">
+    <link rel="stylesheet" href="/CSS/loserstyle.css">
+    <title>radiocarbon test</title>
+    <script src="https://kit.fontawesome.com/63cb2e29a5.js"
+        crossorigin="anonymous"></script>
+
+    <script>
+        window.onscroll = function() {scrollindicator()};
+
+        function scrollindicator() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+            document.getElementById("progressValue").innerHTML = Math.round(scrolled) + "%";
+        } 
+
+        var answers = ["B","C","C","A","D","A"], 
+        tot = answers.length;
+
+        function getCheckedValue( radioName ){
+            var radios = document.getElementsByName( radioName ); // Get radio group by-name
+            for(var y=0; y<radios.length; y++)
+            if(radios[y].checked) return radios[y].value; // return the checked value
+        }
+
+        function getScore(){
+            var score = 0;
+            for (var i=0; i<tot; i++) {
+            if (getCheckedValue("question"+i)===answers[i]) {
+                score += 1;
+                scoring(i,1);
+            } else {
+                scoring(i,0);
+            }
+        }
+            return score;
+        }
+
+        function scoring(question, x) {
+            console.log(question + ". value: " + translator(x));
+            if (x == 0){
+                document.getElementById(question).style.backgroundColor = "#AB0C0C";
+            } else {
+                document.getElementById(question).style.backgroundColor = "#086808";
+            }
+            
+        }
+
+        function translator(y) {
+            if (y == 1) {
+                return "correct";
+            } else {
+                return "incorrect";
+            }
+        }
+
+        function returnScore(){
+            document.getElementById("submitBtn").setAttribute("disabled", "disabled");
+            document.getElementById("formSubmitBtn").style.visibility = "visible";
+            if (document.getElementById("submitBtn").disabled !== "disabled") {
+                var scoreReturn = getScore();
+                var barWidth = (scoreReturn / tot) * 100;
+                
+                document.getElementById("scoreBar").style.width = barWidth + "%";
+                document.getElementById("displayScore").innerHTML = Math.round(barWidth) + "%";
+                return(((scoreReturn / 6) * 100) + "%");
+            }
+            
+        }
+        function sendScore() {
+          const form = document.getElementById("form");
+          const formInput = document.getElementById("textBoxForm");
+          formInput.value = returnScore();
+          console.log(formInput.value);
+          form.submit();
+          document.getElementById("formSubmitBtn").setAttribute("disabled", "disabled");
+        }
+    </script>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-43QFFNE7QS"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-43QFFNE7QS');
+</script>
+
+    <style>
+:root {
+  --black: #000000ff;
+  --night: #101010ff;
+  --eerie-black: #1f1f1fff;
+  --antiflash-white: rgb(207, 207, 207);
+  --antiflash-white-2: rgb(255, 255, 255);
+  --violet-web-color: rgb(255, 187, 253);
+  --ultra-pink: #ff6ffaff;
+}
+
+body {
+  background-color: var(--night);
+  color: var(--antiflash-white-2);
+  font-family: "Lato", sans-serif;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  padding: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+</style>
+
+    <body>
+        <div class="sidebar">
+            <p style="line-height: 100%;">
+                <span>H</span>alf<br>
+                <span>L</span>ife<br>
+                <span>A</span>ssessment
+            </p>
+            <p style="font-size: 4vh;">
+                Progress: <span id="progressValue">0%</span>
+            </p>
+            <div class="progress-bar">
+                <div id="progressBar"></div>
+            </div>
+
+            <p style="font-size: 4vh;">
+                Score: <span id="displayScore">you can't see it until you're
+                    done</span>
+            </p>
+            <div class="progress-bar">
+                <div id="scoreBar"></div>
+            </div>
+            <br>
+            <button class="submit-btn" id="formSubmitBtn"
+                onclick="sendScore()" style="visibility: hidden;">send
+                score</button>
+        </div>
+        <div class="question-panel">
+            <p id="0">1. what's the half life of <sup>14</sup>C?</p>
+            <form>
+                <label class="container">idk like 3 years
+                    <input type="radio" value="A" name="question0">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">5730 years
+                    <input type="radio" value="B" name="question0">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">5370 years
+                    <input type="radio" value="C" name="question0">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">7350 years
+                    <input type="radio" value="D" name="question0">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+
+            <p id="1">2. what's the most amount of time ago that you can do
+                radiocarbon dating?</p>
+            <form>
+                <label class="container">600 years
+                    <input type="radio" value="A" name="question1">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">600,000 years
+                    <input type="radio" value="B" name="question1">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">60,000 years
+                    <input type="radio" value="C" name="question1">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">50,000 years
+                    <input type="radio" value="D" name="question1">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+
+            <p id="2">3. who invented radiocarbon dating</p>
+            <form>
+                <label class="container">will smith
+                    <input type="radio" value="A" name="question2">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">joe mama
+                    <input type="radio" value="B" name="question2">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">willard libby
+                    <input type="radio" value="C" name="question2">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">willard franklin
+                    <input type="radio" value="D" name="question2">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+
+            <p id="3">4. what was radiocarbon originally done with?</p>
+            <form>
+                <label class="container">liquid scintillation counting (LSC)
+
+                    <input type="radio" value="A" name="question3">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">accelerator mass spectrometry (AMS)
+
+                    <input type="radio" value="B" name="question3">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">mass spectrometry
+                    <input type="radio" value="C" name="question3">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">counting by hand
+                    <input type="radio" value="D" name="question3">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+
+            <p id="4">5. which of the following is an alternative to radiocarbon
+                dating?</p>
+            <form>
+                <label class="container">looking at it
+                    <input type="radio" value="A" name="question4">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">krypton-argon dating
+                    <input type="radio" value="B" name="question4">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">eating uranium
+                    <input type="radio" value="C" name="question4">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">uranium-lead dating
+                    <input type="radio" value="D" name="question4">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+
+            <p id="5">6. <strong>bonus:</strong> what's the equation to find
+                what percent of a sample is left after a certain number of half
+                lives</p>
+            <form>
+                <label class="container">(sampleSize *
+                    (1/2)<sup>halfLives</sup>) / sample size
+                    <input type="radio" value="A" name="question5">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">sampleSize * (1/2)<sup>halfLives</sup>
+                    <input type="radio" value="B" name="question5">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">idk
+                    <input type="radio" value="C" name="question5">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">halfLives * (1/2)
+                    <input type="radio" value="D" name="question5">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+
+            <br>
+            <button class="submit-btn" id="submitBtn"
+                onclick="returnScore()">check score</button>
+
+            <form
+                action="https://formspree.io/f/xrgndvnl"
+                method="POST" id="form" style="display: none;">
+                <input type="text" id="textBoxForm" name="score">
+            </form>
+        </div>
+    </body>

@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="./favicon/site.webmanifest">
-    <script src="https://kit.fontawesome.com/63cb2e29a5.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/63cb2e29a5.js" crossorigin="anonymous"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180"
+            href="./favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="./favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16"
+            href="./favicon/favicon-16x16.png">
+        <link rel="manifest" href="./favicon/site.webmanifest">
+        <script src="https://kit.fontawesome.com/63cb2e29a5.js"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/63cb2e29a5.js"
+            crossorigin="anonymous"></script>
 
-    <!-- Primary Meta Tags -->
-    <title>radiocarbon dating sim</title>
-    <meta name="title" content="ingenious0rang3.dev" />
-    <meta name="description" content="im just a weirdo who likes doing some web development :333" />
+        <!-- Primary Meta Tags -->
+        <title>radiocarbon dating sim</title>
+        <meta name="title" content="ingenious0rang3.dev" />
+        <meta name="description"
+            content="im just a weirdo who likes doing some web development :333" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ingenious0rang3.dev" />
-    <meta property="og:title" content="ingenious0rang3.dev" />
-    <meta property="og:description" content="im just a weirdo who likes doing some web development :333" />
-    <meta property="og:image" content="/SVG/metaTag.png">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ingenious0rang3.dev" />
+        <meta property="og:title" content="ingenious0rang3.dev" />
+        <meta property="og:description"
+            content="im just a weirdo who likes doing some web development :333" />
+        <meta property="og:image" content="/SVG/metaTag.png">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://ingenious0rang3.dev" />
-    <meta property="twitter:title" content="ingenious0rang3.dev" />
-    <meta property="twitter:description" content="im just a weirdo who likes doing some web development :333" />
-    <meta property="twitter:image" content="/SVG/metaTag.png" />
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://ingenious0rang3.dev" />
+        <meta property="twitter:title" content="ingenious0rang3.dev" />
+        <meta property="twitter:description"
+            content="im just a weirdo who likes doing some web development :333" />
+        <meta property="twitter:image" content="/SVG/metaTag.png" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
+        <style>
         @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
         :root {
@@ -218,72 +226,87 @@
             user-select: none;
         }
     </style>
-</head>
+    </head>
 
-<body>
-    <nav>
-        <a href="/"><i class="fa-solid fa-house"></i> home</a>
-    </nav>
-    <h1 id="simHeader">radiocarbon dating simulation</h1>
-    <br>
-    <div class="container">
-        <div>
-            <h2 style="margin: 0; padding: 0; text-align: center;">
-                inputs
-            </h2>
-            <p style="font-size: 3vh;">
-                years ago: <span id="year-value" style="font-weight: normal;"></span>
-            </p>
-            <div class="slidecontainer">
-                <input type="range" min="500" max="60000" value="50" class="slider" step="10" id="year-slider">
-                <p style="width: 100%; font-size: 2.5vh;">
-                    <span style="text-align: left; margin-left: .5vh">500</span>
-                    <span style="float: right;">60,000</span>
+    <body>
+        <nav>
+            <a href="/"><i class="fa-solid fa-house"></i> home</a>
+        </nav>
+        <h1 id="simHeader">radiocarbon dating simulation</h1>
+        <br>
+        <div class="container">
+            <div>
+                <h2 style="margin: 0; padding: 0; text-align: center;">
+                    inputs
+                </h2>
+                <p style="font-size: 3vh;">
+                    years ago: <span id="year-value"
+                        style="font-weight: normal;"></span>
                 </p>
-            </div>
-            <br>
-            <p style="font-size: 3vh;">
-                half lives passed: <span id="life-value" style="font-weight: normal;"></span>
-            </p>
-            <div class="slidecontainer">
-                <input type="range" min=".090" max="10.47" value=".090" class="slider" step=".001" id="life-slider">
-                <p style="width: 100%; font-size: 2.5vh;">
-                    <span style="text-align: left; margin-left: .5vh">0.09</span>
-                    <span style="float: right;">10.47</span>
+                <div class="slidecontainer">
+                    <input type="range" min="500" max="60000" value="50"
+                        class="slider" step="10" id="year-slider">
+                    <p style="width: 100%; font-size: 2.5vh;">
+                        <span
+                            style="text-align: left; margin-left: .5vh">500</span>
+                        <span style="float: right;">60,000</span>
+                    </p>
+                </div>
+                <br>
+                <p style="font-size: 3vh;">
+                    half lives passed: <span id="life-value"
+                        style="font-weight: normal;"></span>
                 </p>
-            </div>
+                <div class="slidecontainer">
+                    <input type="range" min=".090" max="10.47" value=".090"
+                        class="slider" step=".001" id="life-slider">
+                    <p style="width: 100%; font-size: 2.5vh;">
+                        <span
+                            style="text-align: left; margin-left: .5vh">0.09</span>
+                        <span style="float: right;">10.47</span>
+                    </p>
+                </div>
 
-            <br>
-            <p style="font-size: 3vh;">
-                initial concentration: <span id="conc-value" style="font-weight: normal;">500 atoms</span>
-            </p>
-            <div class="slidecontainer">
-                <input type="range" min="50" max="1000" value="500" class="slider" step="10" id="conc-slider">
-                <p style="width: 100%; font-size: 2.5vh;">
-                    <span style="text-align: left; margin-left: .5vh">50 atoms</span>
-                    <span style="float: right;">1000 atoms</span>
+                <br>
+                <p style="font-size: 3vh;">
+                    initial concentration: <span id="conc-value"
+                        style="font-weight: normal;">500 atoms</span>
+                </p>
+                <div class="slidecontainer">
+                    <input type="range" min="50" max="1000" value="500"
+                        class="slider" step="10" id="conc-slider">
+                    <p style="width: 100%; font-size: 2.5vh;">
+                        <span style="text-align: left; margin-left: .5vh">50
+                            atoms</span>
+                        <span style="float: right;">1000 atoms</span>
+                    </p>
+                </div>
+                <br>
+                <a class="btn" onclick="reset()">reset</a>
+                <br>
+                <br>
+                <a class="btn" href="./assessment/">take assessment</a>
+                <br>
+                <br>
+                <p style="font-size: 2vh; font-weight: normal;">
+                    <sup>14</sup>C is very uncommon and is only around 1 out of
+                    10<sup>12</sup> atoms of carbon. this is not to scale
                 </p>
             </div>
-            <br>
-            <a class="btn" onclick="reset()">reset</a>
-            <br>
-            <br>
-            <p style="font-size: 2vh; font-weight: normal;">
-                <sup>14</sup>C is very uncommon and is only around 1 out of 10<sup>12</sup> atoms of carbon. this is not to scale
-            </p>
+            <div style="position: relative; padding: 2vh">
+                <p style="font-size: 2.5vh; text-align: center; z-index: 999;"
+                    class="urmom">
+                    percent of <sup>14</sup>C left: <span id="simInfo"
+                        style="font-weight: normal;"></span>
+                </p>
+                <div id="simCont">
+
+                </div>
+
+            </div>
         </div>
-        <div style="position: relative; padding: 2vh">
-            <p style="font-size: 2.5vh; text-align: center; z-index: 999;" class="urmom">
-                percent of <sup>14</sup>C left: <span id="simInfo" style="font-weight: normal;"></span>
-            </p>
-            <div id="simCont">
 
-            </div>
-
-        </div>
-    </div>
-
-    <script>
+        <script>
         var yearSlider = document.getElementById("year-slider");
         var yearSpan = document.getElementById("year-value");
         yearSpan.innerHTML = yearSlider.value;
@@ -382,6 +405,6 @@
         const elements = createRandomDivs(Math.round(500 * (1 / 2) ** .09));
         elements.forEach(element => document.getElementById("simCont").appendChild(element));
     </script>
-</body>
+    </body>
 
 </html>
