@@ -21,6 +21,10 @@ body {
 	background-repeat: repeat-y;
 }
 
+* {
+	font-family: 'noto sans', sans-serif;
+}
+
 h1 {
 	text-align: center;
 	padding: 0;
