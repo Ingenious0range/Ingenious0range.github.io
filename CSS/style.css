@@ -81,12 +81,12 @@ body {
 	transition: 0.3s;
 	vertical-align: center;
 	box-sizing: content-box;
+	cursor: pointer;
 }
 
-.landingHeader a:hover {
-	background-color: var(--lavender-blush);
+.scroll:hover {
+	cursor: pointer;
 }
-
 /*yes i know i'm not starting from 0 with the counting. and no, i don't care*/
 
 .block2 {
