@@ -146,8 +146,9 @@ nav a:hover {
 @media screen and (max-width: 1401px) {
 	.container {
 		grid-template-columns: auto;
-width: 75%;
-left: 0;
+	width: 75%;
+	left: 12.5%;
+	padding: 0;
 	}
 
 	.container > div {
