@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+	--black: #000000;
+	--dark-grey: #0c0c0c;
+	--light-black: #131313;
+	--less-dark-grey: #1a1a1a;
+    --dark-white: #2b2b2b;
+	--white: #ffffff;
+	--light-grey: #e7e7e7;
+}
+
+body {
+	background-color: var(--light-black);
+	color: var(--white);
+	font-family: "noto sans";
+	font-size: 3vh;
+	padding-top: 5vh;
+	background-position: center;
+
+	background-size: contain;
+	background-repeat: repeat-y;
+}
+
+* {
+	font-family: 'noto sans', sans-serif;
+    box-sizing: border-box;
+
+}
+
+h1 {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+nav {
+	background-color: var(--dark-grey);
+	left: 0;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0.5vh 1vh;
+	z-index: 999;
+}
+
+nav a {
+	cursor: pointer;
+	padding: 0.1vh 1.5vh;
+	border-radius: 3vh;
+	font-size: 3vh;
+	user-select: none;
+	color: var(--white);
+	text-decoration: none;
+    white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+nav a:hover {
+	background-color: var(--less-dark-grey);
+}
+
+.container {
+    width: 66%;
+    left: calc(34% / 2);
+    position: absolute;
+    display: grid;
+    grid-template-rows: max-content max-content;
+}
+
+.sub-table-cont {
+    width: 100%;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+.sub-table-cont button {
+    color: var(--white);
+    padding: 1vh;
+    font-size: 2vh;
+    border: none;
+    outline: none;
+    border-radius: .5vh;
+    background-color: var(--dark-white);
+    cursor: pointer;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.sub-table-cont button:last-of-type {
+    padding-right: 1.5vh;
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+    margin: 0;
+}
+
+.sub-table-cont input {
+    background-color: var(--less-dark-grey);
+    color: var(--white);
+    height: fit-content;
+    padding: 1vh 2vh;
+    font-size: 2vh;
+    border: none;
+    outline: none;
+    border-radius: 3vh .5vh .5vh 3vh;
+    width: 50%;
+}
+
+.input-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: calc(50% - .5vh) calc(50% - .5vh);
+    margin-top: 3vh;
+    column-gap: 1vh;
+}
+
+.input-container p {
+    text-align: center;
+    font-size: 3vh;
+    margin: 0;
+    font-weight: bold;
+    margin-bottom: .5vh;
+}
+
+.input-container textarea {
+    resize: none;
+    width: 100%;
+    border-radius: 2vh;
+    padding: 1vh 1.5vh;
+    background-color: var(--less-dark-grey);
+    color: white;
+    border: none;
+    outline: none;
+    font-family: 'noto sans', sans-serif;
+}
+
+.btn {
+    background-color: var(--less-dark-grey);
+    padding: 1vh 2vh;
+    border-radius: 4vh;
+    font-size: 2vh;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .input-container {
+        width: 100%;
+        grid-template-columns: auto;
+        row-gap: 5vh;
+    }
+
+    .sub-table-cont input {
+        width: 100%;
+    }
+
+    .container {
+        width: 95%;
+        left: 2.5%;
+    }
+}
