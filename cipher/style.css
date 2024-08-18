@@ -169,6 +169,20 @@ nav a:hover {
     opacity: .9;
 }
 
+.about {
+    width: 50%;
+    left: 25%;
+    position: absolute;
+}
+
+code {
+    background-color: #0e0e0e;
+    padding: 1px 3px;
+    border-radius: 4px;
+    font-family: monospace;
+    border: 1px solid #000000;
+}
+
 @media screen and (max-width: 800px) {
     .input-container {
         width: 100%;
