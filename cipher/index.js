@@ -40,7 +40,7 @@ const specialCharactersReplacement = ["@", "$", "%", "&", "#", "^", "*"];
 //"@", "$", "%", "&", "#", "^", "*"
 
 const regex = /^[a-z0-9.,?!();"':\/\-_ <>]+$/i;
-const cipherRegex = /^[a-z0-9.,?!();"':\/\-@$%&#^*_ <>]+$/i;
+const cipherRegex = /^[a-z0-9.,?!();"':\/\-@$|&#^*_ <>]+$/i;
 
 async function encode() {
 	document.getElementById("sub-table-error").style.display = "none";
