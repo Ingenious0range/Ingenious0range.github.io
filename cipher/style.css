@@ -78,7 +78,7 @@ nav a:hover {
     justify-content: center;
 }
 
-.sub-table-cont button {
+.sub-table-cont button, .modal button {
     color: var(--white);
     padding: 1vh;
     font-size: 2vh;
@@ -87,22 +87,22 @@ nav a:hover {
     border-radius: .5vh;
     background-color: var(--pink);
     cursor: pointer;
-    margin-right: 3px;
     margin-left: 3px;
 }
 
-.sub-table-cont button:last-of-type {
+.sub-table-cont button:last-of-type, .modal button:last-of-type {
     padding-right: 1.5vh;
     border-top-right-radius: 3vh;
     border-bottom-right-radius: 3vh;
     margin: 0;
+    margin-left: 3px;
 }
 
-.sub-table-cont button:hover {
+.sub-table-cont button:hover, .modal button:hover {
     opacity: .9;
 }
 
-.sub-table-cont input {
+.sub-table-cont input, .modal input {
     background-color: var(--less-dark-grey);
     color: var(--white);
     height: fit-content;
@@ -183,6 +183,28 @@ code {
     border: 1px solid #000000;
 }
 
+.modal {
+    width: 33%;
+    height: auto;
+    background-color: var(--less-dark-grey);
+    position: fixed;
+    padding: 2vh;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    border-radius: 4vh;
+    opacity: 0;
+    transition: .2s;
+    transform: translateY(-3vh) scale(.9);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1vh;
+    right: 2vh;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 800px) {
     .input-container {
         width: 100%;
@@ -197,5 +219,9 @@ code {
     .container {
         width: 95%;
         left: 2.5%;
+    }
+
+    .modal {
+        width: 90%;
     }
 }

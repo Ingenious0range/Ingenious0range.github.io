@@ -42,8 +42,8 @@
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body onload="load();">
-        <nav>
+    <body onload="load();" id="body">
+        <nav id="nav">
             <a href="/"><i class="fa-solid fa-house"></i> home</a>
             <a href="/cipher/about/"><i class="fa-solid fa-circle-info"></i> about cipher</a>
         </nav>
@@ -53,9 +53,11 @@
                 <input type="text" id="sub-table-input" placeholder="substitution table">
                 <button onclick="refreshSubTable()"><i class="fa-solid fa-rotate"></i></button>
                 <button id="copy-btn" onclick="copyToClipboard('sub-table-input')"><i class="fa-solid fa-copy"></i></button>
+                <button id="share-btn" onclick="modal()"><i class="fa-solid fa-share"></i></button>
             </div>
             <p style="font-size: 1.5vh; color: red; margin-top: 1vh; display: none; text-align: center;" id="sub-table-error">invalid substitution table. it must be the correct length and contain each character only once.</p>
             <p style="font-size: 1.5vh; color: red; margin-top: 1vh; display: none; text-align: center;" id="missing-table-error">you actually need a substitution table to decode it lmao</p>
+            <p style="font-size: 1.5vh; color: red; margin-top: 1vh; display: none; text-align: center;" id="missing-table-share-error">you actually need a substitution table to share lol</p>
 
             <div class="input-container">
                 <div>
@@ -73,6 +75,17 @@
                     <p style="margin-top: 1vh;"><button class="btn" onclick="decode()" id="decode-btn" disabled>decode</button></p>
                 </div>
             </div>
+            <div id="share-cont" style="display: flex; flex-direction: column; align-items: center; justify-content:center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; transition: .2s;">
+                <div class="modal" id="share-modal">
+                    <p style="padding: 0; margin: 0; margin-bottom: 2vh; font-weight: bold; text-align: center;">share substitution table</p>
+                    <a class="close-btn" onclick="closeModal()"><i class="fa-solid fa-close"></i></a>
+                    <div style="display: grid; grid-template-columns: auto max-content; width: 100%;">
+                        <input type="text" id="share-subtable-input" placeholder="share link" style="width: 100%; background-color: var(--light-black);">
+                        <button id="share-copy-btn" onclick="copyToClipboard('share-subtable-input')"><i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <noscript>
             <img

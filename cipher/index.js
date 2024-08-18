@@ -1,10 +1,18 @@
-function load() { 
+function load() {
 	document.getElementById("plaintext-error").style.display = "none";
 	document.getElementById("ciphertext-input").value = "";
 	document.getElementById("sub-table-input").value = "";
 	document.getElementById("plaintext-input").value = "";
+	const subTableInput = document.getElementById("sub-table-input");
 	disableBtn("plain");
 	disableBtn("cipher");
+
+	const params = new Proxy(new URLSearchParams(window.location.search), {
+		get: (searchParams, prop) => searchParams.get(prop),
+	});
+	let value = params.table;
+
+	subTableInput.value = value;
 }
 
 function shuffleArray(array) {
@@ -23,8 +31,8 @@ function chanceOfTrue(percentChance) {
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
-const regularCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "?", "!", "(", ")", '"', "'", ":", ";", "-", "_", "/", " ", "<", ">", "@", "$", "%", "&", "#", "^", "*"];
-const dupeRegularCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "?", "!", "(", ")", '"', "'", ":", ";", "-", "_", "/", " ", "<", ">", "@", "$", "%", "&", "#", "^", "*"];
+const regularCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "?", "!", "(", ")", '"', "'", ":", ";", "-", "_", "/", " ", "<", ">", "@", "$", "|", "&", "#", "^", "*"];
+const dupeRegularCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "?", "!", "(", ")", '"', "'", ":", ";", "-", "_", "/", " ", "<", ">", "@", "$", "|", "&", "#", "^", "*"];
 
 const specialCharacters = ["a", "e", "i", "n", "o", "r", " "];
 const specialCharactersReplacement = ["@", "$", "%", "&", "#", "^", "*"];
@@ -236,4 +244,54 @@ function ctrlEnter(e, id) {
 			decode();
 		}
 	}
+}
+
+function modal() {
+	document.getElementById("missing-table-share-error").style.display = "none";
+	document.getElementById("sub-table-error").style.display = "none";
+	const subtable = document.getElementById("sub-table-input").value.split('');
+	const url = window.location.href;
+	const nav = document.getElementById("nav");
+	const modal = document.getElementById("share-modal");
+	const shareLink = document.getElementById("share-subtable-input");
+	const modalCont = document.getElementById("share-cont");
+
+	if ((subtable.value = "")) {
+		document.getElementById("missing-table-share-error").style.display = "block";
+		shareLink.value = '';
+		return;
+
+	} else if (!isValidSubstitutionTable(subtable)) {
+		document.getElementById("sub-table-error").style.display = "block";
+		shareLink.value = "";
+		return;
+	} else {
+		nav.style.zIndex = "1";
+		modalCont.style.zIndex = "999";
+		modalCont.style.backgroundColor = "#0000009f";
+		modal.style.opacity = "1";
+		modal.style.transform = "translateY(0) scale(1)";
+		const urlParams = new URLSearchParams(window.location.search);
+
+		urlParams.set("table", subtable.join(''));
+
+		shareLink.value = window.location.href + "?" + urlParams;
+	}
+	
+}
+
+async function closeModal() {
+	const nav = document.getElementById("nav");
+	const modal = document.getElementById("share-modal");
+	const shareLink = document.getElementById("share-subtable-input");
+	const modalCont = document.getElementById("share-cont");
+	modal.style.transform = "translateY(-3vh) scale(.9)";
+	modalCont.style.zIndex = "999";
+	modalCont.style.backgroundColor = "transparent";
+	modal.style.opacity = "0";
+	
+	await delay(200);
+
+	nav.style.zIndex = "999";
+	modalCont.style.zIndex = "-1";
 }
