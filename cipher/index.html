@@ -60,14 +60,14 @@
             <div class="input-container">
                 <div>
                     <p>plaintext</p>
-                    <textarea placeholder="insert text here or press decode to decode the ciphertext" rows="20" id="plaintext-input" oninput="disableBtn('plain')" onkeydown="ctrlEnter(event, 'encode')"></textarea>
+                    <textarea placeholder="insert text here or press decode to decode the ciphertext" rows="20" id="plaintext-input" oninput="disableBtn('plain')" onkeydown="ctrlEnter(event, 'encode')" onkeyup="keys = [];"></textarea>
                     <p style="font-size: 1.5vh; color: red; margin-top: 1vh; display: none;" id="plaintext-error">invalid character(s) found. valid characters are: A-z, 0-9, ., , ?, !, (, ), \, ", ', :, ;, -, _, /, &#60;, >, and space</p>
                     <p style="font-size: 1.5vh; color: red; margin-top: 1vh; display: none;" id="missing-plaintext-error">turns out you can't encode nothing lol</p>
                     <p style="margin-top: 1vh;"><button class="btn" onclick="encode()" id="encode-btn" disabled>encode</button></p>
                 </div>
                 <div>
                     <p>ciphertext</p>
-                    <textarea placeholder="input ciphertext here or press encode to encode the plaintext" rows="20" id="ciphertext-input" oninput="disableBtn('cipher')"></textarea>
+                    <textarea placeholder="input ciphertext here or press encode to encode the plaintext" rows="20" id="ciphertext-input" oninput="disableBtn('cipher')" onkeydown="ctrlEnter(event, 'decode')" onkeyup="keys = [];"></textarea>
                     <p style="font-size: 1.5vh; color: red; margin-top: 1vh; display: none;" id="ciphertext-error">invalid character(s) found. valid characters are: A-z, 0-9, ., , ?, !, (, ), \, ", ', :, ;, -, _, /, &#60;, >, @, $, %, &, #, ^, *, and space</p>
                     <p style="font-size: 1.5vh; color: red; margin-top: 1vh; display: none;" id="missing-ciphertext-error">turns out you can't decode nothing lol</p>
                     <p style="margin-top: 1vh;"><button class="btn" onclick="decode()" id="decode-btn" disabled>decode</button></p>

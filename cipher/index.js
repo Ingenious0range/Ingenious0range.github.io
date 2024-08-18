@@ -60,7 +60,7 @@ async function encode() {
 	}
 	subTableInput.value = subTable.join("");
 
-	console.log(subTable);
+	//console.log(subTable);
 
 	const outputArray = [];
 
@@ -92,22 +92,22 @@ async function encode() {
 			specialCharactersNum = specialCharacters.indexOf(char);
 			charNum = specialCharactersNum + 52;
 			outputChar = subTable[charNum];
-			console.log(specialCharactersNum);
-			console.log(subTable[54]);
-			console.log("substitute common letter");
+			//console.log(specialCharactersNum);
+			//console.log(subTable[54]);
+			//console.log("substitute common letter");
 			extraShit = "0";
 		}
 
 		if (char == inputArray[i - 1] && chanceOfTrue(33) && extraShit == 1) { 
 			outputArray.push(subTable[dupeRegularCharacters.indexOf(">")]);
-			console.log("repeat prev. letter");
+			//console.log("repeat prev. letter");
 		} else if (chanceOfTrue(10) && extraShit == 1) {
 			extraChar = subTable[Math.floor(Math.random() * (subTable.length - 1))] + subTable[dupeRegularCharacters.indexOf("<")];
 			outputArray.push(outputChar + extraChar);
-			console.log("add letter and then random letter and delete symbol");
+			//console.log("add letter and then random letter and delete symbol");
 		} else {
 			outputArray.push(outputChar);
-			console.log("regular");
+			//console.log("regular");
 		}
 		
 		output.value = outputArray.join("");
@@ -146,7 +146,6 @@ function isValidSubstitutionTable(table) {
 }
 
 function decode() {
-	console.time();
 	document.getElementById("missing-table-error").style.display = "none";
 	document.getElementById("missing-ciphertext-error").style.display = "none";
 
@@ -207,7 +206,6 @@ function decode() {
 	output.value = outputArray.join("");
 	document.getElementById("encode-btn").disabled = false;
 	document.getElementById("decode-btn").disabled = false;
-	console.timeEnd();
 }
 
 function disableBtn(id) {
@@ -226,10 +224,16 @@ function disableBtn(id) {
 	}
 }
 
-function ctrlEnter(e, id) {
-	console.log(e.key);
+let keys = [];
 
-	if (e.key == "Enter" && e.key == "Control") {
-		console.log("yay");
+function ctrlEnter(e, id) {
+	keys.push(e.keyCode);
+
+	if (keys.includes(13) && keys.includes(17)) {
+		if (id == 'encode') {
+			encode();
+		} else if (id == 'decode') {
+			decode();
+		}
 	}
 }
