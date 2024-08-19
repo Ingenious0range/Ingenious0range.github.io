@@ -31,8 +31,8 @@ function chanceOfTrue(percentChance) {
 
 const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 
-const regularCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "?", "!", "(", ")", '"', "'", ":", ";", "-", "_", "/", " ", "<", ">", "@", "$", "|", "&", "#", "^", "*"];
-const dupeRegularCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "?", "!", "(", ")", '"', "'", ":", ";", "-", "_", "/", " ", "<", ">", "@", "$", "|", "&", "#", "^", "*"];
+const regularCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "?", "!", "(", ")", '"', "'", ":", ";", "-", "_", "/", " ", "<", ">", "@", "$", "%", "&", "#", "^", "*"];
+const dupeRegularCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ".", ",", "?", "!", "(", ")", '"', "'", ":", ";", "-", "_", "/", " ", "<", ">", "@", "$", "%", "&", "#", "^", "*"];
 
 const specialCharacters = ["a", "e", "i", "n", "o", "r", " "];
 const specialCharactersReplacement = ["@", "$", "%", "&", "#", "^", "*"];
@@ -40,7 +40,7 @@ const specialCharactersReplacement = ["@", "$", "%", "&", "#", "^", "*"];
 //"@", "$", "%", "&", "#", "^", "*"
 
 const regex = /^[a-z0-9.,?!();"':\/\-_ <>]+$/i;
-const cipherRegex = /^[a-z0-9.,?!();"':\/\-@$|&#^*_ <>]+$/i;
+const cipherRegex = /^[a-z0-9.,?!();"':\/\-@$%&#^*_ <>]+$/i;
 
 async function encode() {
 	document.getElementById("sub-table-error").style.display = "none";
