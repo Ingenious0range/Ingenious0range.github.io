@@ -63,7 +63,7 @@
                 <div>
                     <p>plaintext</p>
                     <textarea placeholder="insert text here or press decode to decode the ciphertext" rows="20" id="plaintext-input" oninput="disableBtn('plain')" onkeydown="ctrlEnter(event, 'encode')" onkeyup="keys = [];"></textarea>
-                    <p style="font-size: 1.5vh; color: red; margin-top: 1vh; display: none;" id="plaintext-error">invalid character(s) found. valid characters are: A-z, 0-9, ., , ?, !, (, ), ", ', :, ;, -, _, /, &#60;, >, and space</p>
+                    <p style="font-size: 1.5vh; color: red; margin-top: 1vh; display: none;" id="plaintext-error">invalid character(s) found. valid characters are: A-z, 0-9, ., , ?, !, (, ), ", ', :, ;, -, _, /, and space</p>
                     <p style="font-size: 1.5vh; color: red; margin-top: 1vh; display: none;" id="missing-plaintext-error">turns out you can't encode nothing lol</p>
                     <p style="margin-top: 1vh;"><button class="btn" onclick="encode()" id="encode-btn" disabled>encode</button></p>
                 </div>
