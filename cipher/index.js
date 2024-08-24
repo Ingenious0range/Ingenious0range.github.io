@@ -224,7 +224,7 @@ function disableBtn(id) {
 	} else if (id == 'cipher' && ciphertext.value != '') {
 		document.getElementById('decode-btn').disabled = false;
 	}
-	this.value.toLowerCase();
+	plaintext.value = plaintext.value.toLowerCase();
 	if (id == "plain" && plaintext.value == "") {
 		document.getElementById("encode-btn").disabled = true;
 	} else if (id == "plain" && plaintext.value != "") {
